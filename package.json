@@ -1,0 +1,13 @@
+{
+  "name": "proste-eslint-config",
+  "version": "0.1.0",
+  "repository": "https://github.com/xyhxx/proste-eslint-config.git",
+  "author": "肖 <603331487@qq.com>",
+  "license": "MIT",
+  "files": [
+    "eslint_js.js",
+    "eslint_react.js",
+    "eslint_react_ts.js",
+    "eslint_ts.js"
+  ]
+}
