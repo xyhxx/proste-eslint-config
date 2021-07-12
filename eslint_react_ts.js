@@ -49,14 +49,14 @@ module.exports = {
     "react/jsx-no-undef": [
       2,
       {
-        "allowGlobals": 2
+        "allowGlobals": true
       }
     ], // 防止未定义的组件
     "react/jsx-no-target-blank": [
       2,
       {
-        "allowReferrer": 2,
-        "enforceDynamicLinks": 2
+        "allowReferrer": true,
+        "enforceDynamicLinks": 'always'
       }
     ], // target='_blank'必须跟rel="noopener noreferrer"
     "react/jsx-no-duplicate-props": 2, // 防止自定义属性有重名问题

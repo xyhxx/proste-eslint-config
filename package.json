@@ -1,6 +1,6 @@
 {
-  "name": "proste-eslint-config",
-  "version": "0.1.0",
+  "name": "eslint-config-proste",
+  "version": "0.1.1",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "肖 <603331487@qq.com>",
   "license": "MIT",
