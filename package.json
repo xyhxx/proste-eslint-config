@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-proste",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "肖 <603331487@qq.com>",
   "license": "MIT",
@@ -9,5 +9,13 @@
     "eslint_react.js",
     "eslint_react_ts.js",
     "eslint_ts.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "react",
+    "typescript",
+    "eslint-extends",
+    "eslint-plugin"
   ]
 }
