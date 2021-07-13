@@ -11,18 +11,20 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
+  "plugins": [
+    "react-hooks",
+  ],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest"
   },
   // 0 允许 1 提示 2禁止
   "rules": {
+    "react-hooks/rules-of-hooks": 2, // 校验react hooks规则
+    "react-hooks/exhaustive-deps": 1, // 判断use Effect中的依赖
     "@typescript-eslint/no-implied-eval": 2, // 禁止eval
     "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
     "@typescript-eslint/no-empty-function": 2, // 禁止空函数
