@@ -4,7 +4,8 @@ module.exports = {
     "commonjs": true,
     "es6": true,
     "jquery": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
@@ -79,7 +80,7 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
-    "no-use-before-define": 2, //未定义前不能使用
+    "no-use-before-define": 0, //未定义前不能使用
     //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     "no-shadow": 0,
     "@typescript-eslint/no-shadow": 0,
