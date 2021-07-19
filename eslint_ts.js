@@ -44,7 +44,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       "error"
     ],
-    "no-unused-vars": 2, //不能有声明后未被使用的变量或参数
+    "no-unused-vars": 0, //不能有声明后未被使用的变量或参数
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
