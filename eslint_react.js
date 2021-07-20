@@ -10,19 +10,13 @@ module.exports = {
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
-    "plugin:react-hooks/recommended"
   ],
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest"
   },
-  "plugins": [
-    "react-hooks",
-  ],
   // 0 允许 1 提示 2禁止
   "rules": {
-    "react-hooks/rules-of-hooks": 2, // 校验react hooks规则
-    "react-hooks/exhaustive-deps": 1, // 判断use Effect中的依赖
     "react/jsx-uses-vars": 2, // 组件引用后必须使用
     "react/jsx-no-undef": [
       2,

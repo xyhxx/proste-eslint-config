@@ -47,13 +47,13 @@ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ## eslint_react
 
 ```
-npm install eslint eslint-plugin-react eslint-plugin-react-hooks -D
+npm install eslint eslint-plugin-react -D
 ```
 
 or
 
 ```
-yarn add eslint eslint-plugin-react eslint-plugin-react-hooks -D
+yarn add eslint eslint-plugin-react -D
 ```
 
 ``` json
@@ -66,13 +66,13 @@ yarn add eslint eslint-plugin-react eslint-plugin-react-hooks -D
 ## eslint_react_ts
 
 ``` 
-npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks -D
+npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
 or 
 
 ```
-yarn add eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks -D
+yarn add eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
 ```
 
 ``` json
