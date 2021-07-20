@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "肖 <603331487@qq.com>",
   "license": "MIT",
@@ -18,7 +18,6 @@
     "typescript",
     "eslint-extends",
     "eslint-plugin",
-    "react-hooks",
-    "react-hooks-lint"
+    "react-lint"
   ]
 }
