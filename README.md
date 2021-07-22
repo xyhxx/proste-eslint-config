@@ -3,13 +3,13 @@
 ## eslint_js
 
 ```
-npm install eslint -D
+npm install eslint eslint-config-proste -D
 ```
 
 or
 
 ```
-yarn add eslint -D
+yarn add eslint eslint-config-proste -D
 ```
 
 ``` json
@@ -23,13 +23,13 @@ yarn add eslint -D
 ## eslint_ts
 
 ``` 
-npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste -D
 ```
 
 or
 
 ```
-yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste -D
 ```
 
 ``` json
@@ -47,13 +47,13 @@ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ## eslint_react
 
 ```
-npm install eslint eslint-plugin-react -D
+npm install eslint eslint-plugin-react eslint-config-proste -D
 ```
 
 or
 
 ```
-yarn add eslint eslint-plugin-react -D
+yarn add eslint eslint-plugin-react eslint-config-proste -D
 ```
 
 ``` json
@@ -66,13 +66,13 @@ yarn add eslint eslint-plugin-react -D
 ## eslint_react_ts
 
 ``` 
-npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 or 
 
 ```
-yarn add eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+yarn add eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 ``` json
