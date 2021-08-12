@@ -29,7 +29,7 @@ module.exports = {
     "no-global-assign": 2, // 禁止对原生对象或只读的全局对象进行赋值
     "for-direction": 2, // 强制 “for” 循环中更新子句的计数器朝着正确的方向移动
     "no-unsafe-finally": 2, // finally 中不能出现控制语句
-    "no-prototype-builtins": 2,
+    "no-prototype-builtins": 0,
     "no-async-promise-executor": 2, // 禁止使用异步函数作为 Promise executor
     "no-compare-neg-zero": 2, // 禁止与-0比较
     "no-multi-assign": 2, // 禁止连续赋值

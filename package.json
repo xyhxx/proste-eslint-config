@@ -1,9 +1,9 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
-  "author": "肖 <603331487@qq.com>",
+  "author": "xyh <603331487@qq.com>",
   "license": "MIT",
   "files": [
     "eslint_js.js",
