@@ -1,3 +1,11 @@
+<!--
+ * @Author: xyh
+ * @Date: 2021-07-11 20:27:32
+ * @LastEditors: xyh
+ * @LastEditTime: 2021-08-22 20:47:38
+ * @FilePath: \proste-eslint-config\README.md
+ * @Description:  
+-->
 <img src="https://raw.githubusercontent.com/xyhxx/program_preview/master/logo/eslint-config.png" />
 
 ## eslint_js
@@ -47,13 +55,15 @@ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslin
 ## eslint_react
 
 ```
-npm install eslint eslint-plugin-react eslint-config-proste -D
+npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks
+ -D
 ```
 
 or
 
 ```
-yarn add eslint eslint-plugin-react eslint-config-proste -D
+yarn add eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks
+ -D
 ```
 
 ``` json
@@ -66,13 +76,15 @@ yarn add eslint eslint-plugin-react eslint-config-proste -D
 ## eslint_react_ts
 
 ``` 
-npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
+npm install eslint eslint-plugin-react eslint-plugin-react-hooks
+ @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 or 
 
 ```
-yarn add eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
+yarn add eslint eslint-plugin-react eslint-plugin-react-hooks
+ @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 ``` json
