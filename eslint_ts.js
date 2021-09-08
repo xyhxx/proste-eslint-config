@@ -313,8 +313,8 @@ module.exports = {
       0,
       10
     ], //函数内最多有几个声明
-    "new-cap": 0, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
-    "new-parens": 2, //new时必须加小括号
+    "new-cap": 2, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
+    "new-parens": 0, //new时必须加小括号
     "newline-after-var": 0, //变量声明后是否需要空一行
     "object-curly-spacing": [
       0,
