@@ -370,7 +370,7 @@ module.exports = {
     ], //不以新行开始的块{前面要不要有空格
     "space-before-function-paren": [
       2,
-      "never"
+      {"anonymous": "never", "named": "never", "asyncArrow": "always"}
     ], //函数定义时括号前面要不要有空格
     "space-in-parens": [
       2,
