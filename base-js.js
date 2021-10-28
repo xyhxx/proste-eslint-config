@@ -1,84 +1,9 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "jquery": true,
-    "node": true,
-    "jest": true
-  },
-  "parser": "@typescript-eslint/parser",
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": "latest"
-  },
-  // 0 允许 1 提示 2禁止
   "rules": {
-    "@typescript-eslint/no-implied-eval": 2, // 禁止eval
-    "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
-    "@typescript-eslint/no-empty-function": 2, // 禁止空函数
-    "@typescript-eslint/no-unsafe-return": 1, // 不允许返回any类型
-    "@typescript-eslint/no-unnecessary-type-assertion": 1, // 类型断言没有改变类型时警告
-    "@typescript-eslint/no-this-alias": [
-      "error",
-      {
-        "allowDestructuring": false, // Disallow `const { props, state } = this`; true by default
-        "allowedNames": [
-          "self"
-        ] // Allow `const self = this`; `[]` by default
-      }
-    ], // this别名的定义
-    "@typescript-eslint/no-misused-promises": 2, // 避免滥用async
-    "@typescript-eslint/no-extra-non-null-assertion": 2, // 禁止额外的非空断言
-    "@typescript-eslint/no-empty-interface": 2, // 禁止定义空的接口
-    "@typescript-eslint/explicit-module-boundary-types": 2, // 导出的函数必须显性定义返回类型
-    "@typescript-eslint/ban-types": 1, // 禁止使用部分类型
-    "@typescript-eslint/ban-ts-comment": 2, // 不允许ts指定注释
-    "@typescript-eslint/await-thenable": 2, // 不允许等待不是未来值的
-    "@typescript-eslint/adjacent-overload-signatures": 2, // 将重载函数写在一起
-    "react/jsx-uses-vars": 2, // 组件引用后必须使用
-    "react/jsx-no-undef": [
-      2,
-      {
-        "allowGlobals": true
-      }
-    ], // 防止未定义的组件
-    "react/jsx-no-target-blank": [
-      2,
-      {
-        "allowReferrer": true,
-        "enforceDynamicLinks": 'always'
-      }
-    ], // target='_blank'必须跟rel="noopener noreferrer"
-    "react/jsx-no-duplicate-props": 2, // 防止自定义属性有重名问题
-    "react/jsx-no-comment-textnodes": 2, // 规定注释格式
-    "react/jsx-key": 2, // 循环元素必须有key
-    "react/no-find-dom-node": 2, // 不允许使用findDOMNode
-    "react/no-deprecated": 1, // 警告已废弃的api
-    "react/no-danger-with-children": 2, // 不允许children和dangerouslySetInnerHTML同时使用
-    "react/no-children-prop": 2, // 不允许children作为prop传递
-    "react/prop-types": 0, // 是否定义props传递类型
-    "react/display-name": 0, // 函数组件是否必须命名
-    // typescript react 引入问题
-    "react/react-in-jsx-scope": 0,
-    "@typescript-eslint/no-unused-vars": [
-      "error"
-    ],
-    "no-unused-vars": 0, //不能有声明后未被使用的变量或参数
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "no-use-before-define": 0, //未定义前不能使用
+    "no-unused-vars": 2, //不能有声明后未被使用的变量或参数
+    "no-use-before-define": 2, //未定义前不能使用
     //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     "no-shadow": 0,
-    "@typescript-eslint/no-shadow": 0,
     //
     "no-new-symbol": 2, //禁止 Symbol 操作符和 new 一起使用
     "no-dupe-class-members": 2, // 禁止类成员中出现重复的名称
@@ -397,7 +322,7 @@ module.exports = {
     ], //不以新行开始的块{前面要不要有空格
     "space-before-function-paren": [
       2,
-      {"anonymous": "never", "named": "never", "asyncArrow": "always"}
+      { "anonymous": "never", "named": "never", "asyncArrow": "always" }
     ], //函数定义时括号前面要不要有空格
     "space-in-parens": [
       2,
@@ -434,5 +359,5 @@ module.exports = {
         "after": true
       }
     ] // switch case的空格
-  }
+  },
 }

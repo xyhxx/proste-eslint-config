@@ -1,104 +1,88 @@
-<!--
- * @Author: xyh
- * @Date: 2021-07-11 20:27:32
- * @LastEditors: xyh
- * @LastEditTime: 2021-08-22 20:47:38
- * @FilePath: \proste-eslint-config\README.md
- * @Description:  
--->
 <img src="https://raw.githubusercontent.com/xyhxx/program_preview/master/logo/eslint-config.png" />
 
-## eslint_js
+## javascript
 
 ```
-npm install eslint eslint-config-proste -D
+npm install eslint eslint-config-proste eslint-plugin-import -D
 ```
 
 or
 
 ```
-yarn add eslint eslint-config-proste -D
+yarn add eslint eslint-config-proste eslint-plugin-import -D
 ```
 
 ``` json
 // .eslintrc.json
 
 {
-  "extends": "proste/eslint_js.js"
+  "extends": "proste/javascript.js"
 }
 ```
 
-## eslint_ts
+## typescript
 
 ``` 
-npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste -D
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import -D
 ```
 
 or
 
 ```
-yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste -D
+yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import -D
 ```
 
 ``` json
 // .eslintrc.json
 {
-  "extends": "./eslint_ts.js",
+  "extends": "proste/typescript.js",
   "parserOptions": {
     "project": "./tsconfig.json",
-    "tsconfigRootDir": ".",
-    "ecmaVersion": "latest",
-    "sourceType": "module",
+    "tsconfigRootDir": "."
+  }
 }
 ```
 
-## eslint_react
+## reactJS
 
 ```
-npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks
- -D
+npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import -D
 ```
 
 or
 
 ```
-yarn add eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks
- -D
+yarn add eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import -D
 ```
 
 ``` json
 // .eslintrc.json
 {
-  "extends": "proste/eslint_react.js"
+  "extends": "proste/reactJS.js"
 }
 ```
 
-## eslint_react_ts
+## reactTS
 
 ``` 
-npm install eslint eslint-plugin-react eslint-plugin-react-hooks
+npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
  @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 or 
 
 ```
-yarn add eslint eslint-plugin-react eslint-plugin-react-hooks
+yarn add eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
  @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
 ```
 
 ``` json
 // .eslintrc.json
 {
-  "extends": "proste/eslint_react_ts.js",
+  "extends": "proste/reactTS.js",
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": ".",
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "warnOnUnsupportedTypeScriptVersion": true
   }
 }
