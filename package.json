@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "xyh <603331487@qq.com>",
   "license": "MIT",
@@ -9,7 +9,12 @@
     "javascript.js",
     "typescript.js",
     "reactJS.js",
-    "reactTS.js"
+    "reactTS.js",
+    "base-env.js",
+    "base-import.js",
+    "base-js.js",
+    "base-react.js",
+    "base-ts.js"
   ],
   "keywords": [
     "eslint",
