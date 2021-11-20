@@ -23,7 +23,7 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": 2, // 避免滥用async
     "@typescript-eslint/no-extra-non-null-assertion": 2, // 禁止额外的非空断言
     "@typescript-eslint/no-empty-interface": 2, // 禁止定义空的接口
-    "@typescript-eslint/explicit-module-boundary-types": 2, // 导出的函数必须显性定义返回类型
+    "@typescript-eslint/explicit-module-boundary-types": 0, // 导出的函数必须显性定义返回类型
     "@typescript-eslint/ban-types": 1, // 禁止使用部分类型
     "@typescript-eslint/ban-ts-comment": 2, // 不允许ts指定注释
     "@typescript-eslint/await-thenable": 2, // 不允许等待不是未来值的

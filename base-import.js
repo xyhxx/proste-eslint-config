@@ -15,9 +15,6 @@ module.exports = {
     "import/no-deprecated": 2, // 禁止使用已废弃的内容
     "import/no-named-as-default-member": 2, // 禁止default上使用其他导出成员
     "import/no-named-as-default": 2, // 检测拆包名称可能会占用default名称
-    "import/no-relative-packages": 2, // 直接导入包名，不允许相对路径，在workspaces常用
-    "import/no-relative-parent-imports": 2, // 不允许父级的相对导入 可以使用别名
-    "import/no-absolute-path": 2, //禁止绝对路径
     "import/no-dynamic-require": 2, // 禁止动态字符串
     "import/no-self-import": 2, // 禁止导入自己
     "import/no-useless-path-segments": 2 // 禁止多余的路径
