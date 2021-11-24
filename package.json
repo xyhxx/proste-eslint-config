@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "xyh <603331487@qq.com>",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "@typescript-eslint/eslint-plugin": "5.4.0"
+    "@typescript-eslint/eslint-plugin": "^5.4.0"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-react": {
