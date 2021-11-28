@@ -1,10 +1,18 @@
 module.exports = {
   "rules": {
+    "max-len": [
+      2,
+      120,
+      2
+    ],
+    "max-params": [
+      2,
+      3
+    ],
     "no-unused-vars": 2, //不能有声明后未被使用的变量或参数
     "no-use-before-define": 2, //未定义前不能使用
     //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     "no-shadow": 0,
-    //
     "no-new-symbol": 2, //禁止 Symbol 操作符和 new 一起使用
     "no-dupe-class-members": 2, // 禁止类成员中出现重复的名称
     "no-useless-escape": 2, // 禁止不必要的转义字符

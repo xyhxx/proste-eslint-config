@@ -3,6 +3,8 @@ module.exports = {
     "no-shadow": 0,
     "no-unused-vars": 0,
     "no-use-before-define": 0,
+    "no-redeclare": 0,
+    "@typescript-eslint/no-redeclare": 2,
     "@typescript-eslint/no-use-before-define": 2,
     "@typescript-eslint/no-unused-vars": 2,
     "@typescript-eslint/no-shadow": 0,
