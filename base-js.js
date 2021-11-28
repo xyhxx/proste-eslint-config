@@ -256,19 +256,10 @@ module.exports = {
       0,
       4
     ], //嵌套块深度
-    "max-len": [
-      0,
-      80,
-      4
-    ], //字符串最大长度
     "max-nested-callbacks": [
       0,
       2
     ], //回调嵌套深度
-    "max-params": [
-      0,
-      3
-    ], //函数最多只能有3个参数
     "max-statements": [
       0,
       10
