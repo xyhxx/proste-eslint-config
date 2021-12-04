@@ -55,7 +55,7 @@ module.exports = {
     "no-extend-native": 0, //禁止扩展native对象
     "no-extra-bind": 2, //禁止不必要的函数绑定
     "no-extra-boolean-cast": 2, //禁止不必要的bool转换
-    "no-extra-parens": 2, //禁止非必要的括号
+    "no-extra-parens": 0, //禁止非必要的括号
     "no-extra-semi": 2, //禁止多余的冒号
     "no-fallthrough": 0, //禁止switch穿透
     "no-floating-decimal": 2, //禁止省略浮点数中的0 .5 3.
