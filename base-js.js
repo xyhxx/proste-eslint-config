@@ -2,8 +2,15 @@ module.exports = {
   "rules": {
     "max-len": [
       2,
-      120,
-      2
+      {
+        "code": 100,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": false,
+        "ignoreTemplateLiterals": false
+      }
     ],
     "max-params": [
       2,
