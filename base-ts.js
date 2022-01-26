@@ -28,6 +28,5 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": 2, // 不允许ts指定注释
     "@typescript-eslint/await-thenable": 2, // 不允许等待不是未来值的
     "@typescript-eslint/adjacent-overload-signatures": 2, // 将重载函数写在一起
-    "@typescript-eslint/no-unused-vars": ["error"],
   },
 };
