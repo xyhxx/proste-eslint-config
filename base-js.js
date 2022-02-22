@@ -130,7 +130,7 @@ module.exports = {
     "no-unreachable": 2, //不能有无法执行的代码
     "no-unused-expressions": 0, //禁止无用的表达式
     "no-useless-call": 2, //禁止不必要的call和apply
-    "no-void": 2, //禁用void操作符
+    "no-void": 0, //禁用void操作符
     "no-var": 2, //禁用var，用let和const代替
     "no-warning-comments": [
       1,
