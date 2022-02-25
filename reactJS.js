@@ -1,10 +1,11 @@
 module.exports = {
-  "extends": [
+  extends: [
     "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "./base-js.js",
     "./base-react.js",
     "./base-import.js",
-    "./base-env.js"
+    "./base-env.js",
   ],
-}
+};

@@ -1,17 +1,18 @@
 module.exports = {
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
   },
-  "extends": [
+  extends: [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
+    "plugin:react/recommended",
     "./base-js.js",
     "./base-ts.js",
     "./base-react.js",
     "./base-import.js",
-    "./base-env.js"
+    "./base-env.js",
   ],
-}
+};
