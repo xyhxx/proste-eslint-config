@@ -12,6 +12,7 @@ module.exports = {
     "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
     "@typescript-eslint/no-empty-function": 2, // 禁止空函数
     "@typescript-eslint/no-unsafe-return": 0, // 不允许返回any类型
+    "@typescript-eslint/no-explicit-any": 0, // 是否允许使用any类型
     "@typescript-eslint/no-unnecessary-type-assertion": 1, // 类型断言没有改变类型时警告
     "@typescript-eslint/no-this-alias": [
       "error",
