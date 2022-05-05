@@ -221,7 +221,7 @@ module.exports = {
     "max-depth": [0, 4], //嵌套块深度
     "max-nested-callbacks": [0, 2], //回调嵌套深度
     "max-statements": [0, 10], //函数内最多有几个声明
-    "new-cap": 2, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
+    "new-cap": 0, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
     "new-parens": 0, //new时必须加小括号
     "newline-after-var": 0, //变量声明后是否需要空一行
     "object-curly-spacing": [0, "never"], //大括号内是否允许不必要的空格
@@ -235,7 +235,7 @@ module.exports = {
     "prefer-reflect": 0, //首选Reflect的方法
     quotes: [1, "single"], //引号类型 `` "" ''
     "quote-props": 0, //对象字面量中的属性名是否强制双引号
-    radix: 2, //parseInt必须指定第二个参数
+    radix: 0, //parseInt必须指定第二个参数
     "id-match": 0, //命名检测
     "require-yield": 0, //生成器函数必须有yield
     semi: [2, "always"], //语句强制分号结尾
