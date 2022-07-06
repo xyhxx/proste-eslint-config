@@ -1,5 +1,14 @@
 module.exports = {
   rules: {
+    "no-useless-catch": 2, // 禁止不必要的catch
+    "array-callback-return": [2, { allowImplicit: true }], // 强制数组方法的回调函数中有 return 语句
+    "prefer-const": [
+      2,
+      {
+        destructuring: "any",
+        ignoreReadBeforeAssign: true,
+      },
+    ], // 优先使用const
     "max-len": [
       2,
       {
@@ -11,7 +20,7 @@ module.exports = {
         ignoreTemplateLiterals: false,
       },
     ],
-    "curly": ["error", "multi"],
+    curly: ["error", "multi"],
     "max-params": [2, 3],
     "no-unused-vars": 1, //不能有声明后未被使用的变量或参数
     "no-use-before-define": 2, //未定义前不能使用
@@ -61,7 +70,7 @@ module.exports = {
     "no-extra-boolean-cast": 2, //禁止不必要的bool转换
     "no-extra-parens": 0, //禁止非必要的括号
     "no-extra-semi": 2, //禁止多余的冒号
-    "no-fallthrough": 0, //禁止switch穿透
+    "no-fallthrough": 2, //禁止switch穿透
     "no-floating-decimal": 2, //禁止省略浮点数中的0 .5 3.
     "no-func-assign": 2, //禁止重复的函数声明
     "no-implicit-coercion": 1, //禁止隐式转换
@@ -119,7 +128,7 @@ module.exports = {
     "no-sync": 0, //nodejs 禁止同步方法
     "no-ternary": 0, //禁止使用三目运算符
     "no-trailing-spaces": 2, //一行结束后面不要有空格
-    "no-this-before-super": 0, //在调用super()之前不能使用this或super
+    "no-this-before-super": 2, //在调用super()之前不能使用this或super
     "no-throw-literal": 2, //禁止抛出字面量错误 throw "error";
     "no-undef": 2, //不能有未定义的变量
     "no-undef-init": 2, //变量初始化时不能直接给它赋值为undefined
@@ -172,18 +181,17 @@ module.exports = {
       },
     ], //逗号前后的空格
     "comma-style": [2, "last"], //逗号风格，换行时在行首还是行尾
-    complexity: [0, 11], //循环复杂度
+    complexity: [2, 3], //循环复杂度
     "computed-property-spacing": [0, "never"], //是否允许计算后的键名什么的
     "consistent-return": 0, //要求 return 语句要么总是指定返回的值，要么不指定
     "consistent-this": [2, "that"], //this别名
     "constructor-super": 2, //非派生类不能调用super，派生类必须调用super
-    curly: 0, //必须使用 if(){} 中的{}
     "default-case": 0, //switch语句最后必须有default
-    "dot-location": 0, //对象访问符的位置，换行的时候在行首还是行尾
+    "dot-location": [2, "property"], //对象访问符的位置，换行的时候在行首还是行尾
     "dot-notation": [
-      0,
+      2,
       {
-        allowKeywords: true,
+        allowKeywords: false,
       },
     ], //避免不必要的方括号
     "eol-last": 0, //文件以单一的换行符结束
