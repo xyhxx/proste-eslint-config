@@ -239,9 +239,8 @@ module.exports = {
     "operator-assignment": [2, "always"], //赋值运算符 += -=什么的
     "operator-linebreak": [2, "before"], //换行时运算符在行尾还是行首
     "padded-blocks": [2, "never"], //块语句内行首行尾是否要空行
-    "prefer-const": 0, //首选const
-    "prefer-spread": 0, //首选展开运算
-    "prefer-reflect": 0, //首选Reflect的方法
+    "prefer-spread": 2, //首选展开运算
+    "prefer-reflect": 2, //首选Reflect的方法
     quotes: [1, "single"], //引号类型 `` "" ''
     "quote-props": 0, //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
