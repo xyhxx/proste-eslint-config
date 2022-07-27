@@ -181,7 +181,7 @@ module.exports = {
       },
     ], //逗号前后的空格
     "comma-style": [2, "last"], //逗号风格，换行时在行首还是行尾
-    complexity: [2, 3], //循环复杂度
+    complexity: 0, //循环复杂度
     "computed-property-spacing": [0, "never"], //是否允许计算后的键名什么的
     "consistent-return": 0, //要求 return 语句要么总是指定返回的值，要么不指定
     "consistent-this": [2, "that"], //this别名
@@ -240,7 +240,7 @@ module.exports = {
     "operator-linebreak": [2, "before"], //换行时运算符在行尾还是行首
     "padded-blocks": [2, "never"], //块语句内行首行尾是否要空行
     "prefer-spread": 2, //首选展开运算
-    "prefer-reflect": 2, //首选Reflect的方法
+    "prefer-reflect": 0, //首选Reflect的方法
     quotes: [1, "single"], //引号类型 `` "" ''
     "quote-props": 0, //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
