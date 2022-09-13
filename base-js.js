@@ -188,12 +188,7 @@ module.exports = {
     "constructor-super": 2, //非派生类不能调用super，派生类必须调用super
     "default-case": 0, //switch语句最后必须有default
     "dot-location": [2, "property"], //对象访问符的位置，换行的时候在行首还是行尾
-    "dot-notation": [
-      2,
-      {
-        allowKeywords: false,
-      },
-    ], //避免不必要的方括号
+    "dot-notation": 0, //避免不必要的方括号
     "eol-last": 0, //文件以单一的换行符结束
     eqeqeq: 2, //必须使用全等
     "func-names": 0, //函数表达式必须有名字
