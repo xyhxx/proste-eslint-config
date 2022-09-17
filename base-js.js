@@ -184,7 +184,7 @@ module.exports = {
     complexity: 0, //循环复杂度
     "computed-property-spacing": [0, "never"], //是否允许计算后的键名什么的
     "consistent-return": 0, //要求 return 语句要么总是指定返回的值，要么不指定
-    "consistent-this": [2, "that"], //this别名
+    "consistent-this": [2, "self"], //this别名
     "constructor-super": 2, //非派生类不能调用super，派生类必须调用super
     "default-case": 0, //switch语句最后必须有default
     "dot-location": [2, "property"], //对象访问符的位置，换行的时候在行首还是行尾
