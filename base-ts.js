@@ -27,6 +27,7 @@ module.exports = {
         checksVoidReturn: false,
       },
     ], // 避免滥用async
+    "@typescript-eslint/no-non-null-assertion": 0, // 非空提示
     "@typescript-eslint/no-extra-non-null-assertion": 2, // 禁止额外的非空断言
     "@typescript-eslint/no-empty-interface": 2, // 禁止定义空的接口
     "@typescript-eslint/explicit-module-boundary-types": 0, // 导出的函数必须显性定义返回类型
