@@ -1,5 +1,21 @@
 module.exports = {
   rules: {
+    // jsx里使用单引号
+    "jsx-quotes": [2, "prefer-single"],
+    // 函数调用间距
+    "func-call-spacing": 2,
+    // 数组换行规则
+    "array-element-newline": [2, "consistent"],
+    // 数组前后不能有空格
+    "array-bracket-spacing": 2,
+    // 禁止没有await表达式的异步函数
+    "require-await": 2,
+    // 箭头函数是否必须使用花括号将函数体包裹
+    "arrow-body-style": [2, "as-needed", { "requireReturnForObjectLiteral": false }],
+    // await禁止可能由于使用或导致竞争条件的分配yield 在编写异步代码时，可能会产生微妙的竞争条件错误。
+    "require-atomic-updates": 2, 
+    "no-unused-private-class-members": 2, // 禁止未使用的私有成员
+    "no-unmodified-loop-condition": 2, // 禁止未修改的循环条件 防止死循环
     "no-useless-catch": 2, // 禁止不必要的catch
     "array-callback-return": [2, { allowImplicit: true }], // 强制数组方法的回调函数中有 return 语句
     "prefer-const": [
@@ -20,7 +36,7 @@ module.exports = {
         ignoreTemplateLiterals: false,
       },
     ],
-    curly: ["error", "multi"],
+    curly: [2, "multi"],
     "max-params": [2, 3],
     "no-unused-vars": 1, //不能有声明后未被使用的变量或参数
     "no-use-before-define": 2, //未定义前不能使用
@@ -182,7 +198,7 @@ module.exports = {
     ], //逗号前后的空格
     "comma-style": [2, "last"], //逗号风格，换行时在行首还是行尾
     complexity: 0, //循环复杂度
-    "computed-property-spacing": [0, "never"], //是否允许计算后的键名什么的
+    "computed-property-spacing": [2, "never"], // 是否允许计算属性内有空格
     "consistent-return": 0, //要求 return 语句要么总是指定返回的值，要么不指定
     "consistent-this": [2, "self"], //this别名
     "constructor-super": 2, //非派生类不能调用super，派生类必须调用super
@@ -228,7 +244,6 @@ module.exports = {
     "new-cap": 0, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
     "new-parens": 0, //new时必须加小括号
     "newline-after-var": 0, //变量声明后是否需要空一行
-    "object-curly-spacing": [0, "never"], //大括号内是否允许不必要的空格
     "object-shorthand": [2, "always"], //强制对象字面量缩写语法
     "one-var": 0, //连续声明
     "operator-assignment": [2, "always"], //赋值运算符 += -=什么的
