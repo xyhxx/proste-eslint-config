@@ -1,5 +1,22 @@
 module.exports = {
   rules: {
+    'yield-star-spacing': ['error', 'after'],
+    'template-tag-spacing': [2, 'never'],
+    'template-curly-spacing': [2, 'never'],
+    'symbol-description': 2,
+    'rest-spread-spacing': [2, 'never'],
+    'prefer-promise-reject-errors': 2,
+    'object-curly-spacing': 2,
+    'no-whitespace-before-property': 2,
+    'no-useless-return': 2,
+    'no-useless-rename': 2,
+    'no-useless-constructor': 2,
+    'no-useless-computed-key': 2,
+    'no-unreachable-loop': 2,
+    'no-template-curly-in-string': 2,
+    'no-array-constructor': 2,
+    // 在打开块之后和关闭块之前禁止或强制块内的空格
+    "block-spacing": [2, 'always'],
     // jsx里使用单引号
     "jsx-quotes": [2, "prefer-single"],
     // 函数调用间距
@@ -13,7 +30,7 @@ module.exports = {
     // 箭头函数是否必须使用花括号将函数体包裹
     "arrow-body-style": [2, "as-needed", { "requireReturnForObjectLiteral": false }],
     // await禁止可能由于使用或导致竞争条件的分配yield 在编写异步代码时，可能会产生微妙的竞争条件错误。
-    "require-atomic-updates": 2, 
+    "require-atomic-updates": 2,
     "no-unused-private-class-members": 2, // 禁止未使用的私有成员
     "no-unmodified-loop-condition": 2, // 禁止未修改的循环条件 防止死循环
     "no-useless-catch": 2, // 禁止不必要的catch
@@ -50,7 +67,7 @@ module.exports = {
     "no-global-assign": 2, // 禁止对原生对象或只读的全局对象进行赋值
     "for-direction": 2, // 强制 “for” 循环中更新子句的计数器朝着正确的方向移动
     "no-unsafe-finally": 2, // finally 中不能出现控制语句
-    "no-prototype-builtins": 0,
+    "no-prototype-builtins": 2,
     "no-async-promise-executor": 2, // 禁止使用异步函数作为 Promise executor
     "no-compare-neg-zero": 2, // 禁止与-0比较
     "no-multi-assign": 2, // 禁止连续赋值
@@ -60,7 +77,7 @@ module.exports = {
     "getter-return": 2,
     "no-alert": 0, //禁止使用alert confirm prompt
     "no-bitwise": 0, //禁止使用按位运算符
-    "no-caller": 0, //禁止使用arguments.caller或arguments.callee
+    "no-caller": 2, //禁止使用arguments.caller或arguments.callee
     "no-catch-shadow": 2, //禁止catch子句参数与外部作用域变量同名
     "no-class-assign": 2, //禁止给类赋值
     "no-cond-assign": 2, //禁止在条件表达式中使用赋值语句
@@ -81,10 +98,10 @@ module.exports = {
     "no-eq-null": 0, //禁止对null使用==或!=运算符
     "no-eval": 1, //禁止使用eval
     "no-ex-assign": 2, //禁止给catch语句中的异常参数赋值
-    "no-extend-native": 0, //禁止扩展native对象
+    "no-extend-native": 2, //禁止扩展native对象
     "no-extra-bind": 2, //禁止不必要的函数绑定
     "no-extra-boolean-cast": 2, //禁止不必要的bool转换
-    "no-extra-parens": 0, //禁止非必要的括号
+    "no-extra-parens": 2, //禁止非必要的括号
     "no-extra-semi": 2, //禁止多余的冒号
     "no-fallthrough": 2, //禁止switch穿透
     "no-floating-decimal": 2, //禁止省略浮点数中的0 .5 3.
@@ -105,10 +122,10 @@ module.exports = {
     "no-mixed-requires": [0, false], //声明时不能混用声明类型
     "no-mixed-spaces-and-tabs": 2, //禁止混用tab和空格
     "linebreak-style": [0, "windows"], //换行风格
-    "no-multi-spaces": 0, //不能用多余的空格
+    "no-multi-spaces": 2, //不能用多余的空格
     "no-multi-str": 2, //字符串不能用\换行
     "no-multiple-empty-lines": [
-      1,
+      2,
       {
         max: 1,
       },
@@ -116,7 +133,7 @@ module.exports = {
     "no-native-reassign": 2, //不能重写native对象
     "no-negated-in-lhs": 2, //in 操作符的左边不能有!
     "no-nested-ternary": 0, //禁止使用嵌套的三目运算
-    "no-new": 0, //禁止在使用new构造一个实例后不赋值
+    "no-new": 2, //禁止在使用new构造一个实例后不赋值
     "no-new-func": 2, //禁止使用new Function
     "no-new-object": 2, //禁止使用new Object()
     "no-new-require": 2, //禁止使用new require
@@ -133,10 +150,10 @@ module.exports = {
     "no-redeclare": 2, //禁止重复声明变量
     "no-regex-spaces": 2, //禁止在正则表达式字面量中使用多个空格 /foo bar/
     "no-restricted-modules": 0, //如果禁用了指定模块，使用就会报错
-    "no-return-assign": 0, //return 语句中不能有赋值表达式
+    "no-return-assign": 2, //return 语句中不能有赋值表达式
     "no-script-url": 0, //禁止使用javascript:void(0)
     "no-self-compare": 2, //不能比较自身
-    "no-sequences": 0, //禁止使用逗号运算符
+    "no-sequences": 2, //禁止使用逗号运算符
     // "no-shadow": 0, //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     "no-shadow-restricted-names": 2, //严格模式中规定的限制标识符不能作为声明时的变量名使用
     "no-spaced-func": 2, //函数调用时 函数名与()之间不能有空格
@@ -153,7 +170,7 @@ module.exports = {
     "no-underscore-dangle": 0, //标识符不能以_开头或结尾
     "no-unneeded-ternary": 2, //禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
     "no-unreachable": 2, //不能有无法执行的代码
-    "no-unused-expressions": 0, //禁止无用的表达式
+    "no-unused-expressions": 2, //禁止无用的表达式
     "no-useless-call": 2, //禁止不必要的call和apply
     "no-void": 0, //禁用void操作符
     "no-var": 2, //禁用var，用let和const代替
@@ -178,7 +195,9 @@ module.exports = {
     "block-scoped-var": 2, //块语句中使用var
     "brace-style": [1, "1tbs"], //大括号风格
     "callback-return": 1, //避免多次调用回调什么的
-    camelcase: 2, //强制驼峰法命名
+    'camelcase': [2, {
+      allow: ['^UNSAFE_'],
+    }], //强制驼峰法命名
     "comma-dangle": [
       2,
       {
@@ -205,11 +224,11 @@ module.exports = {
     "default-case": 0, //switch语句最后必须有default
     "dot-location": [2, "property"], //对象访问符的位置，换行的时候在行首还是行尾
     "dot-notation": 0, //避免不必要的方括号
-    "eol-last": 0, //文件以单一的换行符结束
-    eqeqeq: 2, //必须使用全等
+    "eol-last": 2, //文件以单一的换行符结束
+    'eqeqeq': [2, 'always', { null: 'ignore' }], //必须使用全等
     "func-names": 0, //函数表达式必须有名字
     "func-style": [0, "declaration"], //函数风格，规定只能使用函数声明/函数表达式
-    "generator-star-spacing": 0, //生成器函数*的前后空格
+    'generator-star-spacing': [2, { before: false, after: true }], //生成器函数*的前后空格
     "guard-for-in": 0, //for in循环要用if语句过滤
     "handle-callback-err": 0, //nodejs 处理错误
     "id-length": 0, //变量名长度
@@ -228,6 +247,7 @@ module.exports = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
       },
+      
     ], //缩进风格
     "init-declarations": 0, //声明时必须赋初值
     "key-spacing": [
@@ -241,8 +261,8 @@ module.exports = {
     "max-depth": [0, 4], //嵌套块深度
     "max-nested-callbacks": [0, 2], //回调嵌套深度
     "max-statements": [0, 10], //函数内最多有几个声明
-    "new-cap": 0, //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
-    "new-parens": 0, //new时必须加小括号
+    "new-cap": [2, { newIsCap: true, capIsNew: false, properties: true }], //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
+    "new-parens": 2, //new时必须加小括号
     "newline-after-var": 0, //变量声明后是否需要空一行
     "object-shorthand": [2, "always"], //强制对象字面量缩写语法
     "one-var": 0, //连续声明
@@ -252,7 +272,7 @@ module.exports = {
     "prefer-spread": 2, //首选展开运算
     "prefer-reflect": 0, //首选Reflect的方法
     quotes: [1, "single"], //引号类型 `` "" ''
-    "quote-props": 0, //对象字面量中的属性名是否强制双引号
+    "quote-props": [2, 'as-needed'], //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
     "id-match": 0, //命名检测
     "require-yield": 0, //生成器函数必须有yield
@@ -274,6 +294,7 @@ module.exports = {
     "space-in-parens": [2, "never"], //小括号里面要不要有空格
     "space-infix-ops": 2, //中缀操作符周围要不要有空格
     "keyword-spacing": 2, //return throw case后面要不要加空格
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
     "space-unary-ops": [
       2,
       {
