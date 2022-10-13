@@ -49,7 +49,7 @@ module.exports = {
         tabWidth: 2,
         ignoreUrls: true,
         ignoreRegExpLiterals: true,
-        ignoreStrings: false,
+        ignoreStrings: true,
         ignoreTemplateLiterals: false,
       },
     ],
