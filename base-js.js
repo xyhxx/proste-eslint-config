@@ -170,7 +170,7 @@ module.exports = {
     "no-underscore-dangle": 0, //标识符不能以_开头或结尾
     "no-unneeded-ternary": 2, //禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
     "no-unreachable": 2, //不能有无法执行的代码
-    "no-unused-expressions": 2, //禁止无用的表达式
+    "no-unused-expressions": 0, //禁止无用的表达式
     "no-useless-call": 2, //禁止不必要的call和apply
     "no-void": 0, //禁用void操作符
     "no-var": 2, //禁用var，用let和const代替
