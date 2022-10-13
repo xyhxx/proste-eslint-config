@@ -1,12 +1,14 @@
 module.exports = {
   rules: {
-    "no-shadow": 0,
-    "no-unused-vars": 0,
-    "no-use-before-define": 0,
+    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
+    '@typescript-eslint/type-annotation-spacing': 2,
     "no-redeclare": 0,
     "@typescript-eslint/no-redeclare": 2,
+    "no-use-before-define": 0,
     "@typescript-eslint/no-use-before-define": 2,
+    "no-unused-vars": 0,
     "@typescript-eslint/no-unused-vars": 1,
+    "no-shadow": 0,
     "@typescript-eslint/no-shadow": 0,
     "@typescript-eslint/no-implied-eval": 2, // 禁止eval
     "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
