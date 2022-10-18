@@ -13,6 +13,40 @@ module.exports = {
     }
   },
   "rules": {
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
+    "react/jsx-indent": [
+      2,
+      2
+    ],
+    "react/jsx-fragments": [
+      2,
+      "syntax"
+    ],
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "react/jsx-equals-spacing": [
+      2,
+      "never"
+    ],
+    "react/jsx-curly-spacing": [
+      2,
+      {
+        "when": "never",
+        "children": {
+          "when": "never"
+        }
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      2,
+      "line-aligned"
+    ],
+    "react/jsx-boolean-value": [2, "never"], // true的attr不填写
     "react/jsx-uses-vars": 2, // 组件引用后必须使用
     "react/jsx-no-undef": [
       2,
