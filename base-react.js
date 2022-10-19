@@ -13,6 +13,31 @@ module.exports = {
     }
   },
   "rules": {
+    "react/void-dom-elements-no-children": 2,
+    "react/self-closing-comp": [
+      2,
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      2,
+      {
+        "return": "parens-new-line",
+        "arrow": "parens-new-line"
+      }
+    ],
+    "react/jsx-tag-spacing": [
+      2,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "never"
+      }
+    ],
+    "react/jsx-no-useless-fragment": 2,
     "react/jsx-indent-props": [
       2,
       2
