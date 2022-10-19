@@ -13,6 +13,13 @@ module.exports = {
     }
   },
   "rules": {
+    "react/jsx-max-props-per-line": [
+      2,
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
     "react/void-dom-elements-no-children": 2,
     "react/self-closing-comp": [
       2,
