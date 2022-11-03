@@ -1,5 +1,18 @@
 module.exports = {
   rules: {
+    "object-curly-newline": [
+      2,
+      {
+        "multiline": true,
+        "consistent": true
+      }
+    ],
+    "object-property-newline": [
+      2,
+      {
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
     'yield-star-spacing': ['error', 'after'],
     'template-tag-spacing': [2, 'never'],
     'template-curly-spacing': [2, 'never'],
@@ -96,7 +109,7 @@ module.exports = {
     "no-empty": 2, //块语句中的内容不能为空
     "no-empty-character-class": 2, //正则表达式中的[]内容不能为空
     "no-eq-null": 0, //禁止对null使用==或!=运算符
-    "no-eval": 1, //禁止使用eval
+    "no-eval": 2, //禁止使用eval
     "no-ex-assign": 2, //禁止给catch语句中的异常参数赋值
     "no-extend-native": 2, //禁止扩展native对象
     "no-extra-bind": 2, //禁止不必要的函数绑定
@@ -111,14 +124,14 @@ module.exports = {
     "no-inline-comments": 0, //禁止行内备注
     "no-inner-declarations": [2, "functions"], //禁止在块语句中使用声明（变量或函数）
     "no-invalid-regexp": 2, //禁止无效的正则表达式
-    "no-invalid-this": 0, //禁止无效的this，只能用在构造器，类，对象字面量
+    "no-invalid-this": 2, //禁止无效的this，只能用在构造器，类，对象字面量
     "no-irregular-whitespace": 2, //不能有不规则的空格
     "no-iterator": 2, //禁止使用__iterator__ 属性
     "no-label-var": 2, //label名不能与var声明的变量名相同
     "no-labels": 2, //禁止标签声明
     "no-lone-blocks": 2, //禁止不必要的嵌套块
     "no-lonely-if": 0, //禁止else语句内只有if语句
-    "no-loop-func": 1, //禁止在循环中使用函数（如果没有引用外部变量不形成闭包就可以）
+    "no-loop-func": 2, //禁止在循环中使用函数（如果没有引用外部变量不形成闭包就可以）
     "no-mixed-requires": [0, false], //声明时不能混用声明类型
     "no-mixed-spaces-and-tabs": 2, //禁止混用tab和空格
     "linebreak-style": [0, "windows"], //换行风格
@@ -133,7 +146,7 @@ module.exports = {
     "no-native-reassign": 2, //不能重写native对象
     "no-negated-in-lhs": 2, //in 操作符的左边不能有!
     "no-nested-ternary": 0, //禁止使用嵌套的三目运算
-    "no-new": 2, //禁止在使用new构造一个实例后不赋值
+    "no-new": 0, //禁止在使用new构造一个实例后不赋值
     "no-new-func": 2, //禁止使用new Function
     "no-new-object": 2, //禁止使用new Object()
     "no-new-require": 2, //禁止使用new require
@@ -154,7 +167,6 @@ module.exports = {
     "no-script-url": 0, //禁止使用javascript:void(0)
     "no-self-compare": 2, //不能比较自身
     "no-sequences": 2, //禁止使用逗号运算符
-    // "no-shadow": 0, //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     "no-shadow-restricted-names": 2, //严格模式中规定的限制标识符不能作为声明时的变量名使用
     "no-spaced-func": 2, //函数调用时 函数名与()之间不能有空格
     "no-sparse-arrays": 2, //禁止稀疏数组， [1,,2]
@@ -247,7 +259,7 @@ module.exports = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
       },
-      
+
     ], //缩进风格
     "init-declarations": 0, //声明时必须赋初值
     "key-spacing": [
@@ -271,7 +283,7 @@ module.exports = {
     "padded-blocks": [2, "never"], //块语句内行首行尾是否要空行
     "prefer-spread": 2, //首选展开运算
     "prefer-reflect": 0, //首选Reflect的方法
-    quotes: [1, "single"], //引号类型 `` "" ''
+    quotes: [2, "single"], //引号类型 `` "" ''
     "quote-props": [2, 'as-needed'], //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
     "id-match": 0, //命名检测
@@ -294,7 +306,7 @@ module.exports = {
     "space-in-parens": [2, "never"], //小括号里面要不要有空格
     "space-infix-ops": 2, //中缀操作符周围要不要有空格
     "keyword-spacing": 2, //return throw case后面要不要加空格
-    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
+    'lines-between-class-members': [2, 'always', { exceptAfterSingleLine: false }],
     "space-unary-ops": [
       2,
       {
@@ -303,7 +315,7 @@ module.exports = {
       },
     ], //一元运算符的前/后要不要加空格
     "spaced-comment": 0, //注释风格要不要有空格什么的
-    strict: 0, //使用严格模式
+    strict: 2, //使用严格模式
     "use-isnan": 2, //禁止比较时使用NaN，只能用isNaN()
     "valid-jsdoc": 0, //jsdoc规则
     "valid-typeof": 2, //必须使用合法的typeof的值

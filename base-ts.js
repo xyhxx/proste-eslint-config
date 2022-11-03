@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
-    '@typescript-eslint/type-annotation-spacing': 2,
+    "no-extra-parens": 0,
+    "@typescript-eslint/no-extra-parens": 2,
     "no-redeclare": 0,
     "@typescript-eslint/no-redeclare": 2,
     "no-use-before-define": 0,
@@ -10,9 +10,72 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": 1,
     "no-shadow": 0,
     "@typescript-eslint/no-shadow": 0,
+    "no-implied-eval": 0,
     "@typescript-eslint/no-implied-eval": 2, // 禁止eval
+    "no-extra-semi": 0, //禁止多余的冒号
     "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
+    "no-empty-function": 0,
     "@typescript-eslint/no-empty-function": 2, // 禁止空函数
+    'object-curly-spacing': 0,
+    "@typescript-eslint/object-curly-spacing": 2,
+    "no-useless-constructor": 0,
+    "@typescript-eslint/no-useless-constructor": 2,
+    "no-array-constructor": 0,
+    "@typescript-eslint/no-array-constructor": 2,
+    "func-call-spacing": 0,
+    "@typescript-eslint/func-call-spacing": 2,
+    "require-await": 0,
+    "@typescript-eslint/require-await": 2,
+    "no-dupe-class-members": 0,
+    "@typescript-eslint/no-dupe-class-members": 2,
+    "no-invalid-this": 0,
+    "@typescript-eslint/no-invalid-this": 2,
+    "no-loop-func": 0,
+    "@typescript-eslint/no-loop-func": 2,
+    "no-throw-literal": 0,
+    "@typescript-eslint/no-throw-literal": 2,
+    "brace-style": 0,
+    "@typescript-eslint/brace-style": [1, "1tbs"],
+    "comma-dangle": 0,
+    "@typescript-eslint/comma-dangle": [
+      2,
+      {
+        arrays: "always-multiline",
+        objects: "always-multiline",
+        imports: "always-multiline",
+        exports: "always-multiline",
+        functions: "always-multiline",
+      },
+    ],
+    "comma-spacing": 0,
+    "@typescript-eslint/comma-spacing": [
+      2,
+      {
+        before: false,
+        after: true,
+      },
+    ],
+    "quotes": 0,
+    "@typescript-eslint/quotes": [2, "single"],
+    "semi": 0,
+    "@typescript-eslint/semi": [2, "always"],
+    "space-before-blocks": 0,
+    "@typescript-eslint/space-before-blocks": [2, "always"],
+    "space-before-function-paren": 0,
+    "@typescript-eslint/space-before-function-paren": [
+      2,
+      { anonymous: "never", named: "never", asyncArrow: "always" },
+    ],
+    "space-infix-ops": 0,
+    "@typescript-eslint/space-infix-ops": 2,
+    "keyword-spacing": 0,
+    "@typescript-eslint/keyword-spacing": 2,
+    "lines-between-class-members": 0,
+    "@typescript-eslint/lines-between-class-members": [2, 'always', { exceptAfterSingleLine: false }],
+
+    "@typescript-eslint/dot-notation": 0,
+    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
+    '@typescript-eslint/type-annotation-spacing': 2,
     "@typescript-eslint/no-unsafe-return": 0, // 不允许返回any类型
     "@typescript-eslint/no-explicit-any": 0, // 是否允许使用any类型
     "@typescript-eslint/no-unnecessary-type-assertion": 1, // 类型断言没有改变类型时警告
