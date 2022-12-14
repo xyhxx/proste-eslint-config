@@ -34,6 +34,24 @@ module.exports = {
     "@typescript-eslint/no-loop-func": 2,
     "no-throw-literal": 0,
     "@typescript-eslint/no-throw-literal": 2,
+    "indent": 0,
+    "@typescript-eslint/indent": [
+      2,
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: {
+          var: 2,
+          let: 2,
+          const: 3,
+        },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+      },
+
+    ],
     "brace-style": 0,
     "@typescript-eslint/brace-style": [1, "1tbs"],
     "comma-dangle": 0,
