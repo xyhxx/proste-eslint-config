@@ -1,7 +1,7 @@
 module.exports = {
   rules: {
     "no-extra-parens": 0,
-    "@typescript-eslint/no-extra-parens": 2,
+    "@typescript-eslint/no-extra-parens": 0,
     "no-redeclare": 0,
     "@typescript-eslint/no-redeclare": 2,
     "no-use-before-define": 0,
