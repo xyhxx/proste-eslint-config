@@ -44,7 +44,7 @@ module.exports = {
         "beforeClosing": "never"
       }
     ],
-    "react/jsx-no-useless-fragment": 2,
+    "react/jsx-no-useless-fragment": 0,
     "react/jsx-indent-props": [
       2,
       2
