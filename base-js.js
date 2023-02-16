@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    'function-paren-newline': [2, 'multiline-arguments'],
     "object-curly-newline": [
       2,
       {
@@ -262,13 +263,7 @@ module.exports = {
 
     ], //缩进风格
     "init-declarations": 0, //声明时必须赋初值
-    "key-spacing": [
-      2,
-      {
-        beforeColon: false,
-        afterColon: true,
-      },
-    ], //对象字面量中冒号的前后空格
+    "key-spacing": 2, //对象字面量中冒号的前后空格
     "lines-around-comment": 0, //行前/行后备注
     "max-depth": [0, 4], //嵌套块深度
     "max-nested-callbacks": [0, 2], //回调嵌套深度
