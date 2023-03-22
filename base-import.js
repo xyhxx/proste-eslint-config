@@ -1,6 +1,5 @@
 module.exports = {
-  "rules": {
-    'import-newlines/enforce': [2, {'max-len': 100, items: Infinity}],
+  rules: {
     "import/no-unresolved": 0,
     "import/first": 2, // import必须放在顶部
     "import/no-namespace": 2, // 禁止 * as xxx
@@ -8,8 +7,8 @@ module.exports = {
     "import/no-duplicates": [
       2,
       {
-        "considerQueryString": true
-      }
+        considerQueryString: true,
+      },
     ], // 禁止重复导入相同路径
     "import/export": 2, // 检查导出信息
     "import/no-mutable-exports": 2, // 禁止导出可变内容
@@ -18,6 +17,6 @@ module.exports = {
     "import/no-named-as-default": 2, // 检测拆包名称可能会占用default名称
     "import/no-dynamic-require": 2, // 禁止动态字符串
     "import/no-self-import": 2, // 禁止导入自己
-    "import/no-useless-path-segments": 2 // 禁止多余的路径
+    "import/no-useless-path-segments": 2, // 禁止多余的路径
   },
 };
