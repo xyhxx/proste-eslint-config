@@ -1,6 +1,10 @@
 module.exports = {
   rules: {
+    'prefer-destructuring': 2,
+    'array-bracket-newline': [2, {multiline: true}],
+    'array-element-newline': [2, {multiline: true}],
     'function-paren-newline': [2, 'multiline-arguments'],
+    'function-call-argument-newline': [2, 'consistent'],
     "object-curly-newline": [
       2,
       {
