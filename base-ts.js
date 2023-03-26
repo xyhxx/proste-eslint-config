@@ -16,7 +16,7 @@ module.exports = {
     "@typescript-eslint/no-extra-semi": 2, // 禁止多余冒号
     "no-empty-function": 0,
     "@typescript-eslint/no-empty-function": 2, // 禁止空函数
-    'object-curly-spacing': 0,
+    "object-curly-spacing": 0,
     "@typescript-eslint/object-curly-spacing": 2,
     "no-useless-constructor": 0,
     "@typescript-eslint/no-useless-constructor": 2,
@@ -34,7 +34,7 @@ module.exports = {
     "@typescript-eslint/no-loop-func": 2,
     "no-throw-literal": 0,
     "@typescript-eslint/no-throw-literal": 2,
-    "indent": 0,
+    indent: 0,
     "@typescript-eslint/indent": [
       2,
       2,
@@ -50,7 +50,6 @@ module.exports = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
       },
-
     ],
     "brace-style": 0,
     "@typescript-eslint/brace-style": [1, "1tbs"],
@@ -76,9 +75,9 @@ module.exports = {
         after: true,
       },
     ],
-    "quotes": 0,
+    quotes: 0,
     "@typescript-eslint/quotes": [2, "single"],
-    "semi": 0,
+    semi: 0,
     "@typescript-eslint/semi": [2, "always"],
     "space-before-blocks": 0,
     "@typescript-eslint/space-before-blocks": [2, "always"],
@@ -92,11 +91,16 @@ module.exports = {
     "keyword-spacing": 0,
     "@typescript-eslint/keyword-spacing": 2,
     "lines-between-class-members": 0,
-    "@typescript-eslint/lines-between-class-members": [2, 'always', { exceptAfterSingleLine: false }],
+    "@typescript-eslint/lines-between-class-members": [
+      2,
+      "always",
+      { exceptAfterSingleLine: false },
+    ],
 
+    "@typescript-eslint/switch-exhaustiveness-check": 2,
     "@typescript-eslint/dot-notation": 0,
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
-    '@typescript-eslint/type-annotation-spacing': 2,
+    "@typescript-eslint/consistent-type-definitions": [2, "type"],
+    "@typescript-eslint/type-annotation-spacing": 2,
     "@typescript-eslint/no-unsafe-return": 0, // 不允许返回any类型
     "@typescript-eslint/no-explicit-any": 0, // 是否允许使用any类型
     "@typescript-eslint/no-unnecessary-type-assertion": 1, // 类型断言没有改变类型时警告
