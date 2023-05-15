@@ -14,6 +14,7 @@ module.exports = {
     "ecmaVersion": "latest"
   },
   "plugins": [
-    "import"
+    "import",
+    "import-newlines"
   ],
 };

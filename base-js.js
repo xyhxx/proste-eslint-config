@@ -63,7 +63,7 @@ module.exports = {
     "max-len": [
       2,
       {
-        code: 100,
+        code: 80,
         tabWidth: 2,
         ignoreUrls: true,
         ignoreRegExpLiterals: true,
