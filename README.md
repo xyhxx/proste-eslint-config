@@ -3,13 +3,7 @@
 ## javascript
 
 ```
-npm install eslint eslint-config-proste eslint-plugin-import -D
-```
-
-or
-
-```
-yarn add eslint eslint-config-proste eslint-plugin-import -D
+npm install eslint eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
 ``` json
@@ -23,13 +17,7 @@ yarn add eslint eslint-config-proste eslint-plugin-import -D
 ## typescript
 
 ``` 
-npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import -D
-```
-
-or
-
-```
-yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import -D
+npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
 ``` json
@@ -46,13 +34,7 @@ yarn add eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslin
 ## reactJS
 
 ```
-npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import -D
-```
-
-or
-
-```
-yarn add eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import -D
+npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
 ``` json
@@ -66,14 +48,7 @@ yarn add eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hoo
 
 ``` 
 npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
- @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
-```
-
-or 
-
-```
-yarn add eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
- @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste -D
+ @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste eslint-plugin-import-newlines -D
 ```
 
 ``` json
