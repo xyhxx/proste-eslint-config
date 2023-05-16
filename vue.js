@@ -35,5 +35,6 @@ module.exports = {
     'vue/no-useless-mustaches': 1,
     'vue/prefer-define-options': 1,
     'vue/prefer-true-attribute-shorthand': 1,
+    'vue/html-quotes': [1, 'single'],
   },
 };
