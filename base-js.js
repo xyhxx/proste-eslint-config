@@ -60,7 +60,7 @@ module.exports = {
         ignoreReadBeforeAssign: true,
       },
     ], // 优先使用const
-    "max-len": [
+    'max-len': [
       2,
       {
         code: 80,
@@ -68,7 +68,8 @@ module.exports = {
         ignoreUrls: true,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: false,
+        ignoreTemplateLiterals: true,
+        ignoreComments: false,
       },
     ],
     curly: [2, "all"],
