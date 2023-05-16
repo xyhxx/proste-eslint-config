@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "./base-js.js",
+    "./base-env.js"
+  ]
+}

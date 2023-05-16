@@ -1,1 +1,7 @@
 node_modules
+.github
+.gitignore
+README.md
+LICENSE
+package-lock.json
+pnpm-lock.yaml
