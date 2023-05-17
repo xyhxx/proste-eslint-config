@@ -34,8 +34,8 @@ module.exports = {
     'no-array-constructor': 2,
     // 在打开块之后和关闭块之前禁止或强制块内的空格
     'block-spacing': [2, 'always'],
-    // jsx里使用单引号
-    'jsx-quotes': [2, 'prefer-single'],
+    // jsx里属性使用双引号
+    'jsx-quotes': [1, 'prefer-double'],
     // 函数调用间距
     'func-call-spacing': 2,
     // 数组换行规则
@@ -282,7 +282,7 @@ module.exports = {
     'padded-blocks': [2, 'never'], //块语句内行首行尾是否要空行
     'prefer-spread': 2, //首选展开运算
     'prefer-reflect': 0, //首选Reflect的方法
-    quotes: [2, 'single'], //引号类型 `` "" ''
+    quotes: [1, 'single'], //引号类型 `` "" ''
     'quote-props': [2, 'as-needed'], //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
     'id-match': 0, //命名检测

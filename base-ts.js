@@ -76,7 +76,7 @@ module.exports = {
       },
     ],
     quotes: 0,
-    '@typescript-eslint/quotes': [2, 'single'],
+    '@typescript-eslint/quotes': [1, 'single'],
     semi: 0,
     '@typescript-eslint/semi': [2, 'always'],
     'space-before-blocks': 0,
