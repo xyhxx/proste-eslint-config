@@ -1,8 +1,19 @@
 module.exports = {
   extends: ['plugin:vue/vue3-recommended'],
   rules: {
+    'vue/v-on-event-hyphenation': [1, 'never'],
     'vue/multi-word-component-names': 0,
-    'vue/max-attributes-per-line': 0,
+    'vue/max-attributes-per-line': [
+      1,
+      {
+        singleline: {
+          max: 10,
+        },
+        multiline: {
+          max: 1,
+        },
+      },
+    ],
     'vue/mustache-interpolation-spacing': [1, 'never'],
     'vue/attribute-hyphenation': [2, 'never'],
     'vue/html-self-closing': [
