@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "7.1.0",
+  "version": "7.2.0",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "xyh <603331487@qq.com>",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "base-js.js",
     "base-react.js",
     "base-ts.js",
-    "vue.js"
+    "vue.js",
+    "vitest.js"
   ],
   "keywords": [
     "eslint",

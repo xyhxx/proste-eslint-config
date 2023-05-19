@@ -69,7 +69,7 @@ module.exports = {
         ignoreComments: false,
       },
     ],
-    curly: [2, 'all'],
+    curly: [1, 'multi-or-nest', 'consistent'],
     'max-params': [2, 3],
     'no-unused-vars': 1, //不能有声明后未被使用的变量或参数
     'no-use-before-define': 2, //未定义前不能使用
