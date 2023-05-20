@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['plugin:vue/vue3-recommended'],
   rules: {
+    'vue/require-default-prop': 0,
     'vue/v-on-event-hyphenation': [1, 'never'],
     'vue/multi-word-component-names': 0,
     'vue/max-attributes-per-line': [
