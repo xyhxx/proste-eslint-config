@@ -105,10 +105,10 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 0, // 是否允许使用any类型
     '@typescript-eslint/no-unnecessary-type-assertion': 1, // 类型断言没有改变类型时警告
     '@typescript-eslint/no-this-alias': [
-      'error',
+      1,
       {
         // Disallow `const { props, state } = this`; true by default
-        allowDestructuring: false,
+        allowDestructuring: true,
         allowedNames: ['self'], // Allow `const self = this`; `[]` by default
       },
     ], // this别名的定义
