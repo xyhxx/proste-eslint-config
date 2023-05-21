@@ -36,7 +36,7 @@ module.exports = {
         order: ['script', 'template', 'style'],
       },
     ],
-    'vue/component-api-style': 1,
+    'vue/component-api-style': 0,
     'vue/component-name-in-template-casing': [1, 'PascalCase'],
     'vue/component-options-name-casing': [1, 'PascalCase'],
     'vue/custom-event-name-casing': [1, 'camelCase'],
