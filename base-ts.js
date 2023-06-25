@@ -17,13 +17,13 @@ module.exports = {
     'no-empty-function': 0,
     '@typescript-eslint/no-empty-function': 2, // 禁止空函数
     'object-curly-spacing': 0,
-    '@typescript-eslint/object-curly-spacing': 2,
+    '@typescript-eslint/object-curly-spacing': 1,
     'no-useless-constructor': 0,
     '@typescript-eslint/no-useless-constructor': 2,
     'no-array-constructor': 0,
     '@typescript-eslint/no-array-constructor': 2,
     'func-call-spacing': 0,
-    '@typescript-eslint/func-call-spacing': 2,
+    '@typescript-eslint/func-call-spacing': 1,
     'require-await': 0,
     '@typescript-eslint/require-await': 2,
     'no-dupe-class-members': 0,
@@ -55,7 +55,7 @@ module.exports = {
     '@typescript-eslint/brace-style': [1, '1tbs'],
     'comma-dangle': 0,
     '@typescript-eslint/comma-dangle': [
-      2,
+      1,
       {
         arrays: 'always-multiline',
         objects: 'always-multiline',
@@ -69,7 +69,7 @@ module.exports = {
     ],
     'comma-spacing': 0,
     '@typescript-eslint/comma-spacing': [
-      2,
+      1,
       {
         before: false,
         after: true,
@@ -80,26 +80,26 @@ module.exports = {
     semi: 0,
     '@typescript-eslint/semi': [2, 'always'],
     'space-before-blocks': 0,
-    '@typescript-eslint/space-before-blocks': [2, 'always'],
+    '@typescript-eslint/space-before-blocks': [1, 'always'],
     'space-before-function-paren': 0,
     '@typescript-eslint/space-before-function-paren': [
-      2,
+      1,
       {anonymous: 'never', named: 'never', asyncArrow: 'always'},
     ],
     'space-infix-ops': 0,
-    '@typescript-eslint/space-infix-ops': 2,
+    '@typescript-eslint/space-infix-ops': 1,
     'keyword-spacing': 0,
-    '@typescript-eslint/keyword-spacing': 2,
+    '@typescript-eslint/keyword-spacing': 1,
     'lines-between-class-members': 0,
     '@typescript-eslint/lines-between-class-members': [
-      2,
+      1,
       'always',
       {exceptAfterSingleLine: false},
     ],
 
     '@typescript-eslint/switch-exhaustiveness-check': 2,
     '@typescript-eslint/dot-notation': 0,
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
+    '@typescript-eslint/consistent-type-definitions': [1, 'type'],
     '@typescript-eslint/type-annotation-spacing': 2,
     '@typescript-eslint/no-unsafe-return': 0, // 不允许返回any类型
     '@typescript-eslint/no-explicit-any': 0, // 是否允许使用any类型
@@ -113,7 +113,7 @@ module.exports = {
       },
     ], // this别名的定义
     '@typescript-eslint/no-misused-promises': [
-      2,
+      1,
       {
         checksVoidReturn: false,
       },
@@ -125,6 +125,6 @@ module.exports = {
     '@typescript-eslint/ban-types': 1, // 禁止使用部分类型
     '@typescript-eslint/ban-ts-comment': 2, // 不允许ts指定注释
     '@typescript-eslint/await-thenable': 2, // 不允许等待不是未来值的
-    '@typescript-eslint/adjacent-overload-signatures': 2, // 将重载函数写在一起
+    '@typescript-eslint/adjacent-overload-signatures': 1, // 将重载函数写在一起
   },
 };

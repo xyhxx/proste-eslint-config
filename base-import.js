@@ -1,10 +1,10 @@
 module.exports = {
   rules: {
-    'import-newlines/enforce': [2, {'max-len': 80, items: Infinity}],
+    'import-newlines/enforce': [1, {'max-len': 80, items: Infinity}],
     'import/no-unresolved': 0,
     'import/first': 2, // import必须放在顶部
-    'import/no-namespace': 2, // 禁止 * as xxx
-    'import/newline-after-import': 2, // import与代码之间有空行
+    'import/no-namespace': 0, // 禁止 * as xxx
+    'import/newline-after-import': 1, // import与代码之间有空行
     'import/no-duplicates': [
       2,
       {

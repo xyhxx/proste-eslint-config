@@ -18,7 +18,7 @@ module.exports = {
     'vue/mustache-interpolation-spacing': [1, 'never'],
     'vue/attribute-hyphenation': [2, 'never'],
     'vue/html-self-closing': [
-      2, {
+      1, {
         html: {
           void: 'always',
           normal: 'always',
