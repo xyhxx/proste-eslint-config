@@ -97,6 +97,19 @@ module.exports = {
       {exceptAfterSingleLine: false},
     ],
 
+    '@typescript-eslint/naming-convention': [
+      2,
+      {
+        selector: [
+          'interface',
+          'enum',
+          'typeAlias',
+          'typeParameter',
+          'enumMember',
+        ],
+        format: ['PascalCase'],
+      },
+    ],
     '@typescript-eslint/switch-exhaustiveness-check': 2,
     '@typescript-eslint/dot-notation': 0,
     '@typescript-eslint/consistent-type-definitions': [1, 'type'],
