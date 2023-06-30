@@ -97,6 +97,18 @@ module.exports = {
       {exceptAfterSingleLine: false},
     ],
 
+    '@typescript-eslint/member-delimiter-style': [
+      1, {
+        multiline: {
+          delimiter: 'comma',
+          requireLast: true,
+        },
+        singleline: {
+          delimiter: 'comma',
+          requireLast: false,
+        },
+      },
+    ], // 类型属性后加,
     '@typescript-eslint/naming-convention': [
       2,
       {
