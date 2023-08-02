@@ -15,10 +15,6 @@ module.exports = {
     'react/jsx-props-no-multi-spaces': 1,
     'react/jsx-curly-newline': 1,
     'react/jsx-closing-tag-location': 1, // 强制jsx结束标签位置
-    'react/hook-use-state': [
-      1,
-      {allowDestructuredState: true},
-    ], // 强制useState getter和setter命名对称
     'react/jsx-max-props-per-line': [
       1,
       {
