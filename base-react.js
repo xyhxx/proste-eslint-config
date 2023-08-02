@@ -11,6 +11,14 @@ module.exports = {
     },
   },
   rules: {
+    'react/no-unknown-property': 1,
+    'react/jsx-props-no-multi-spaces': 1,
+    'react/jsx-curly-newline': 1,
+    'react/jsx-closing-tag-location': 1, // 强制jsx结束标签位置
+    'react/hook-use-state': [
+      1,
+      {allowDestructuredState: true},
+    ], // 强制useState getter和setter命名对称
     'react/jsx-max-props-per-line': [
       1,
       {
@@ -99,7 +107,7 @@ module.exports = {
     'react/no-danger-with-children': 2, // 不允许children和dangerouslySetInnerHTML同时使用
     'react/no-children-prop': 1, // 不允许children作为prop传递
     'react/prop-types': 0, // 是否定义props传递类型
-    'react/display-name': 2, // 函数组件是否必须命名
+    'react/display-name': 1, // 函数组件是否必须命名
     // typescript react 引入问题
     'react/react-in-jsx-scope': 0,
   },
