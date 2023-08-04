@@ -112,14 +112,43 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       2,
       {
+        selector: 'default',
+        format: ['camelCase'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+      },
+      {
         selector: [
           'interface',
           'enum',
           'typeAlias',
           'typeParameter',
           'enumMember',
+          'class',
         ],
         format: ['PascalCase'],
+      },
+      {
+        selector: 'variable',
+        format: [
+          'camelCase',
+          'UPPER_CASE',
+        ],
+      },
+      {
+        selector: [
+          'function',
+          'classMethod',
+          'classProperty',
+          'objectLiteralMethod',
+          'accessor',
+          'objectLiteralProperty',
+          'parameter',
+          'parameterProperty',
+          'typeMethod',
+          'typeProperty',
+        ],
+        format: ['camelCase'],
       },
     ],
     '@typescript-eslint/switch-exhaustiveness-check': 2,
