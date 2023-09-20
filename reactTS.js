@@ -9,6 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     './base-js.js',
     './base-ts.js',
     './base-react.js',

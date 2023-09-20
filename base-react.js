@@ -11,6 +11,19 @@ module.exports = {
     },
   },
   rules: {
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: ['function-declaration', 'function-expression'],
+        unnamedComponents: 'function-expression',
+      },
+    ],
+    'react/jsx-one-expression-per-line': [1, {allow: 'single-child'}],
+    'react/jsx-curly-brace-presence': 1,
+    'react/no-danger': 2,
+    'react/jsx-pascal-case': [2, {allowAllCaps: true}],
+    'react/jsx-filename-extension': [2, {extensions: ['.jsx', '.tsx']}],
+    'react/no-multi-comp': [2, {ignoreStateless: true}],
     'react/no-unknown-property': 1,
     'react/jsx-props-no-multi-spaces': 1,
     'react/jsx-curly-newline': 1,
@@ -104,7 +117,5 @@ module.exports = {
     'react/no-children-prop': 1, // 不允许children作为prop传递
     'react/prop-types': 0, // 是否定义props传递类型
     'react/display-name': 1, // 函数组件是否必须命名
-    // typescript react 引入问题
-    'react/react-in-jsx-scope': 0,
   },
 };
