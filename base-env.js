@@ -13,8 +13,5 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 'latest',
   },
-  plugins: [
-    'import',
-    'import-newlines',
-  ],
+  plugins: ['import'],
 };

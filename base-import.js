@@ -1,6 +1,5 @@
 module.exports = {
   rules: {
-    'import-newlines/enforce': [1, {'max-len': 80, items: Infinity}],
     'import/no-unresolved': 0,
     'import/first': 2, // import必须放在顶部
     'import/no-namespace': 0, // 禁止 * as xxx
