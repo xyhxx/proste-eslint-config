@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "9.0.0",
+  "version": "9.1.0",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "xyh <603331487@qq.com>",
   "license": "MIT",
@@ -55,6 +55,8 @@
   },
   "devDependencies": {
     "eslint": "^8.40.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^3.0.3"
   }
 }

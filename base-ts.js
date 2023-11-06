@@ -98,7 +98,8 @@ module.exports = {
     ],
 
     '@typescript-eslint/member-delimiter-style': [
-      1, {
+      1,
+      {
         multiline: {
           delimiter: 'comma',
           requireLast: true,
@@ -129,12 +130,8 @@ module.exports = {
         format: ['PascalCase'],
       },
       {
-        selector: 'variable',
-        format: [
-          'camelCase',
-          'PascalCase',
-          'UPPER_CASE',
-        ],
+        selector: ['variable', 'import'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         selector: [
