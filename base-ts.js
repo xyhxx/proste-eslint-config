@@ -1,7 +1,5 @@
 module.exports = {
   rules: {
-    'no-extra-parens': 0,
-    '@typescript-eslint/no-extra-parens': 0,
     'no-redeclare': 0,
     '@typescript-eslint/no-redeclare': 2,
     'no-use-before-define': 0,
@@ -12,18 +10,12 @@ module.exports = {
     '@typescript-eslint/no-shadow': 0,
     'no-implied-eval': 0,
     '@typescript-eslint/no-implied-eval': 2, // 禁止eval
-    'no-extra-semi': 0, //禁止多余的冒号
-    '@typescript-eslint/no-extra-semi': 2, // 禁止多余冒号
     'no-empty-function': 0,
     '@typescript-eslint/no-empty-function': 2, // 禁止空函数
-    'object-curly-spacing': 0,
-    '@typescript-eslint/object-curly-spacing': 1,
     'no-useless-constructor': 0,
     '@typescript-eslint/no-useless-constructor': 2,
     'no-array-constructor': 0,
     '@typescript-eslint/no-array-constructor': 2,
-    'func-call-spacing': 0,
-    '@typescript-eslint/func-call-spacing': 1,
     'require-await': 0,
     '@typescript-eslint/require-await': 2,
     'no-dupe-class-members': 0,
@@ -34,68 +26,6 @@ module.exports = {
     '@typescript-eslint/no-loop-func': 2,
     'no-throw-literal': 0,
     '@typescript-eslint/no-throw-literal': 2,
-    indent: 0,
-    '@typescript-eslint/indent': [
-      2,
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: {
-          var: 2,
-          let: 2,
-          const: 3,
-        },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-      },
-    ],
-    'brace-style': 0,
-    '@typescript-eslint/brace-style': [1, '1tbs'],
-    'comma-dangle': 0,
-    '@typescript-eslint/comma-dangle': [
-      1,
-      {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'always-multiline',
-        enums: 'always-multiline',
-        generics: 'always-multiline',
-        tuples: 'always-multiline',
-      },
-    ],
-    'comma-spacing': 0,
-    '@typescript-eslint/comma-spacing': [
-      1,
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    quotes: 0,
-    '@typescript-eslint/quotes': [1, 'single'],
-    semi: 0,
-    '@typescript-eslint/semi': [2, 'always'],
-    'space-before-blocks': 0,
-    '@typescript-eslint/space-before-blocks': [1, 'always'],
-    'space-before-function-paren': 0,
-    '@typescript-eslint/space-before-function-paren': [
-      1,
-      {anonymous: 'never', named: 'never', asyncArrow: 'always'},
-    ],
-    'space-infix-ops': 0,
-    '@typescript-eslint/space-infix-ops': 1,
-    'keyword-spacing': 0,
-    '@typescript-eslint/keyword-spacing': 1,
-    'lines-between-class-members': 0,
-    '@typescript-eslint/lines-between-class-members': [
-      1,
-      'always',
-      {exceptAfterSingleLine: false},
-    ],
 
     '@typescript-eslint/member-delimiter-style': [
       1,

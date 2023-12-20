@@ -1,30 +1,8 @@
 module.exports = {
   rules: {
     'prefer-destructuring': 1,
-    'array-bracket-newline': [1, {multiline: true}],
-    'function-paren-newline': [1, 'multiline-arguments'],
-    'function-call-argument-newline': [1, 'consistent'],
-    'object-curly-newline': [
-      1,
-      {
-        multiline: true,
-        consistent: true,
-      },
-    ],
-    'object-property-newline': [
-      1,
-      {
-        allowAllPropertiesOnSameLine: true,
-      },
-    ],
-    'yield-star-spacing': [2, 'after'],
-    'template-tag-spacing': [1, 'never'],
-    'template-curly-spacing': [1, 'never'],
     'symbol-description': 2,
-    'rest-spread-spacing': [1, 'never'],
     'prefer-promise-reject-errors': 2,
-    'object-curly-spacing': 1,
-    'no-whitespace-before-property': 1,
     'no-useless-return': 2,
     'no-useless-rename': 2,
     'no-useless-constructor': 2,
@@ -32,18 +10,14 @@ module.exports = {
     'no-unreachable-loop': 2,
     'no-template-curly-in-string': 2,
     'no-array-constructor': 2,
-    // 在打开块之后和关闭块之前禁止或强制块内的空格
-    'block-spacing': [1, 'always'],
-    // jsx里属性使用双引号
-    'jsx-quotes': [1, 'prefer-double'],
-    // 函数调用间距
-    'func-call-spacing': 1,
-    // 数组换行规则
-    'array-element-newline': [1, 'consistent'],
     // 禁止没有await表达式的异步函数
     'require-await': 2,
     // 箭头函数是否必须使用花括号将函数体包裹
-    'arrow-body-style': [1, 'as-needed', {requireReturnForObjectLiteral: false}],
+    'arrow-body-style': [
+      1,
+      'as-needed',
+      {requireReturnForObjectLiteral: false},
+    ],
     // await禁止可能由于使用或导致竞争条件的分配yield 在编写异步代码时，可能会产生微妙的竞争条件错误。
     'require-atomic-updates': 2,
     'no-unused-private-class-members': 2, // 禁止未使用的私有成员
@@ -57,18 +31,6 @@ module.exports = {
         ignoreReadBeforeAssign: true,
       },
     ], // 优先使用const
-    'max-len': [
-      2,
-      {
-        code: 80,
-        tabWidth: 2,
-        ignoreUrls: true,
-        ignoreRegExpLiterals: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-        ignoreComments: false,
-      },
-    ],
     curly: [1, 'multi-or-nest', 'consistent'],
     'max-params': [2, 3],
     'no-unused-vars': 1, //不能有声明后未被使用的变量或参数
@@ -117,10 +79,7 @@ module.exports = {
     'no-extend-native': 2, //禁止扩展native对象
     'no-extra-bind': 2, //禁止不必要的函数绑定
     'no-extra-boolean-cast': 2, //禁止不必要的bool转换
-    'no-extra-parens': 0, //禁止非必要的括号
-    'no-extra-semi': 2, //禁止多余的冒号
     'no-fallthrough': 2, //禁止switch穿透
-    'no-floating-decimal': 2, //禁止省略浮点数中的0 .5 3.
     'no-func-assign': 2, //禁止重复的函数声明
     'no-implicit-coercion': 1, //禁止隐式转换
     'no-implied-eval': 2, //禁止使用隐式eval
@@ -136,16 +95,7 @@ module.exports = {
     'no-lonely-if': 0, //禁止else语句内只有if语句
     'no-loop-func': 2, //禁止在循环中使用函数（如果没有引用外部变量不形成闭包就可以）
     'no-mixed-requires': [0, false], //声明时不能混用声明类型
-    'no-mixed-spaces-and-tabs': 2, //禁止混用tab和空格
-    'linebreak-style': [0, 'windows'], //换行风格
-    'no-multi-spaces': 1, //不能用多余的空格
     'no-multi-str': 2, //字符串不能用\换行
-    'no-multiple-empty-lines': [
-      1,
-      {
-        max: 1,
-      },
-    ], //空行最多不能超过2行
     'no-native-reassign': 2, //不能重写native对象
     'no-negated-in-lhs': 2, //in 操作符的左边不能有!
     'no-nested-ternary': 0, //禁止使用嵌套的三目运算
@@ -175,7 +125,6 @@ module.exports = {
     'no-sparse-arrays': 1, //禁止稀疏数组， [1,,2]
     'no-sync': 0, //nodejs 禁止同步方法
     'no-ternary': 0, //禁止使用三目运算符
-    'no-trailing-spaces': 1, //一行结束后面不要有空格
     'no-this-before-super': 2, //在调用super()之前不能使用this或super
     'no-throw-literal': 2, //禁止抛出字面量错误 throw "error";
     'no-undef': 2, //不能有未定义的变量
@@ -197,137 +146,48 @@ module.exports = {
       },
     ], //不能有警告备注
     'no-with': 2, //禁用with
-    'array-bracket-spacing': [1, 'never'], //是否允许非空数组里面有多余的空格
-    'arrow-parens': [1, 'as-needed'], //箭头函数用小括号括起来
-    'arrow-spacing': [
-      1,
-      {
-        before: true,
-        after: true,
-      },
-    ], //=>的前/后括号
     'accessor-pairs': 2, //强制 getter 和 setter 在对象中成对出现
     'block-scoped-var': 2, //块语句中使用var
-    'brace-style': [1, '1tbs'], //大括号风格
     'callback-return': 1, //避免多次调用回调什么的
     camelcase: [
-      2, {
+      2,
+      {
         allow: ['^UNSAFE_'],
       },
     ], //强制驼峰法命名
-    'comma-dangle': [
-      1,
-      {
-        arrays: 'always-multiline',
-        objects: 'always-multiline',
-        imports: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'always-multiline',
-      },
-    ], //对象字面量项尾不能有逗号
-    'comma-spacing': [
-      1,
-      {
-        before: false,
-        after: true,
-      },
-    ], //逗号前后的空格
-    'comma-style': [1, 'last'], //逗号风格，换行时在行首还是行尾
     complexity: 0, //循环复杂度
-    'computed-property-spacing': [2, 'never'], // 是否允许计算属性内有空格
     'consistent-return': 0, //要求 return 语句要么总是指定返回的值，要么不指定
     'consistent-this': [2, 'self'], //this别名
     'constructor-super': 2, //非派生类不能调用super，派生类必须调用super
     'default-case': 0, //switch语句最后必须有default
-    'dot-location': [1, 'property'], //对象访问符的位置，换行的时候在行首还是行尾
     'dot-notation': 0, //避免不必要的方括号
-    'eol-last': 2, //文件以单一的换行符结束
     eqeqeq: [2, 'always', {null: 'ignore'}], //必须使用全等
     'func-names': 0, //函数表达式必须有名字
     'func-style': [0, 'declaration'], //函数风格，规定只能使用函数声明/函数表达式
-    'generator-star-spacing': [1, {before: false, after: true}], //生成器函数*的前后空格
     'guard-for-in': 0, //for in循环要用if语句过滤
     'handle-callback-err': 0, //nodejs 处理错误
     'id-length': 0, //变量名长度
-    indent: [
-      2,
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: {
-          var: 2,
-          let: 2,
-          const: 3,
-        },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-      },
-
-    ], //缩进风格
     'init-declarations': 0, //声明时必须赋初值
-    'key-spacing': 1, //对象字面量中冒号的前后空格
-    'lines-around-comment': 0, //行前/行后备注
     'max-depth': [0, 4], //嵌套块深度
     'max-nested-callbacks': [0, 2], //回调嵌套深度
     'max-statements': [0, 10], //函数内最多有几个声明
     'new-cap': [2, {newIsCap: true, capIsNew: false, properties: true}], //函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
-    'new-parens': 2, //new时必须加小括号
     'newline-after-var': 0, //变量声明后是否需要空一行
     'object-shorthand': [1, 'always'], //强制对象字面量缩写语法
     'one-var': 0, //连续声明
     'operator-assignment': [1, 'always'], //赋值运算符 += -=什么的
-    'operator-linebreak': [1, 'before'], //换行时运算符在行尾还是行首
-    'padded-blocks': [1, 'never'], //块语句内行首行尾是否要空行
     'prefer-spread': 1, //首选展开运算
     'prefer-reflect': 0, //首选Reflect的方法
-    quotes: [1, 'single'], //引号类型 `` "" ''
-    'quote-props': [1, 'as-needed'], //对象字面量中的属性名是否强制双引号
     radix: 0, //parseInt必须指定第二个参数
     'id-match': 0, //命名检测
     'require-yield': 0, //生成器函数必须有yield
-    semi: [2, 'always'], //语句强制分号结尾
-    'semi-spacing': [
-      0,
-      {
-        before: false,
-        after: true,
-      },
-    ], //分号前后空格
     'sort-vars': 0, //变量声明时排序
     'space-after-keywords': [0, 'always'], //关键字后面是否要空一格
-    'space-before-blocks': [1, 'always'], //不以新行开始的块{前面要不要有空格
-    'space-before-function-paren': [
-      1,
-      {anonymous: 'never', named: 'never', asyncArrow: 'always'},
-    ], //函数定义时括号前面要不要有空格
-    'space-in-parens': [1, 'never'], //小括号里面要不要有空格
-    'space-infix-ops': 1, //中缀操作符周围要不要有空格
-    'keyword-spacing': 1, //return throw case后面要不要加空格
-    'lines-between-class-members': [1, 'always', {exceptAfterSingleLine: false}],
-    'space-unary-ops': [
-      1,
-      {
-        words: true,
-        nonwords: false,
-      },
-    ], //一元运算符的前/后要不要加空格
-    'spaced-comment': 0, //注释风格要不要有空格什么的
     strict: 2, //使用严格模式
     'use-isnan': 2, //禁止比较时使用NaN，只能用isNaN()
     'valid-jsdoc': 0, //jsdoc规则
     'valid-typeof': 2, //必须使用合法的typeof的值
     'vars-on-top': 2, //var必须放在作用域顶部
-    'wrap-iife': [2, 'inside'], //立即执行函数表达式的小括号风格
-    'wrap-regex': 0, //正则表达式字面量用小括号包起来
     yoda: [2, 'never'], //禁止尤达条件
-    'switch-colon-spacing': [
-      1,
-      {
-        before: false,
-        after: true,
-      },
-    ], // switch case的空格
   },
 };
