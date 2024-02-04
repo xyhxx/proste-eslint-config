@@ -33,7 +33,13 @@ module.exports = {
     ], // 优先使用const
     curly: [1, 'multi-or-nest', 'consistent'],
     'max-params': [2, 3],
-    'no-unused-vars': 1, //不能有声明后未被使用的变量或参数
+    'no-unused-vars': [
+      1,
+      {
+        varsIgnorePattern: '^_',
+        argsIgnorePattern: '^_',
+      },
+    ], //不能有声明后未被使用的变量或参数
     'no-use-before-define': 2, //未定义前不能使用
     //外部作用域中的变量不能与它所包含的作用域中的变量或参数同名
     'no-shadow': 0,

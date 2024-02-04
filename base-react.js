@@ -11,6 +11,15 @@ module.exports = {
     },
   },
   rules: {
+    'react/boolean-prop-naming': [
+      1,
+      {
+        propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
+        rule: '^(?!is)[a-z]+([A-Za-z0-9]?)+$',
+        message: '{{propName}}不允许以is开头',
+      },
+    ],
+    'react/jsx-handler-names': [1],
     'react/function-component-definition': [
       2,
       {
@@ -60,26 +69,11 @@ module.exports = {
       },
     ],
     'react/jsx-no-useless-fragment': 0,
-    'react/jsx-indent-props': [
-      2,
-      2,
-    ],
-    'react/jsx-indent': [
-      2,
-      2,
-    ],
-    'react/jsx-fragments': [
-      1,
-      'syntax',
-    ],
-    'react/jsx-first-prop-new-line': [
-      1,
-      'multiline',
-    ],
-    'react/jsx-equals-spacing': [
-      1,
-      'never',
-    ],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-indent': [2, 2],
+    'react/jsx-fragments': [1, 'syntax'],
+    'react/jsx-first-prop-new-line': [1, 'multiline'],
+    'react/jsx-equals-spacing': [1, 'never'],
     'react/jsx-curly-spacing': [
       1,
       {
@@ -89,10 +83,7 @@ module.exports = {
         },
       },
     ],
-    'react/jsx-closing-bracket-location': [
-      1,
-      'line-aligned',
-    ],
+    'react/jsx-closing-bracket-location': [1, 'line-aligned'],
     'react/jsx-boolean-value': [1, 'never'], // true的attr不填写
     'react/jsx-uses-vars': 2, // 组件引用后必须使用
     'react/jsx-no-undef': [
