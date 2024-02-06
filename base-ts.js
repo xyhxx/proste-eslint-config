@@ -5,7 +5,13 @@ module.exports = {
     'no-use-before-define': 0,
     '@typescript-eslint/no-use-before-define': 2,
     'no-unused-vars': 0,
-    '@typescript-eslint/no-unused-vars': 1,
+    '@typescript-eslint/no-unused-vars': [
+      1,
+      {
+        varsIgnorePattern: '^_',
+        argsIgnorePattern: '^_',
+      },
+    ],
     'no-shadow': 0,
     '@typescript-eslint/no-shadow': 0,
     'no-implied-eval': 0,
