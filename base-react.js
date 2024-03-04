@@ -33,7 +33,7 @@ module.exports = {
     'react/jsx-pascal-case': [2, {allowAllCaps: true}],
     'react/jsx-filename-extension': [2, {extensions: ['.jsx', '.tsx']}],
     'react/no-multi-comp': [2, {ignoreStateless: true}],
-    'react/no-unknown-property': 1,
+    'react/no-unknown-property': [1, {requireDataLowercase: true}],
     'react/jsx-props-no-multi-spaces': 1,
     'react/jsx-curly-newline': 1,
     'react/jsx-closing-tag-location': 1, // 强制jsx结束标签位置
