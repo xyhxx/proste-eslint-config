@@ -6,24 +6,24 @@
 npm install eslint eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
-``` json
+```json
 // .eslintrc.json
 
 {
-  "extends": "proste/javascript.js"
+  "extends": "proste/javascript"
 }
 ```
 
 ## typescript
 
-``` 
+```
 npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
-``` json
+```json
 // .eslintrc.json
 {
-  "extends": "proste/typescript.js",
+  "extends": "proste/typescript",
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": "."
@@ -37,24 +37,24 @@ npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin es
 npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-import-newlines -D
 ```
 
-``` json
+```json
 // .eslintrc.json
 {
-  "extends": "proste/reactJS.js"
+  "extends": "proste/react-js"
 }
 ```
 
 ## reactTS
 
-``` 
+```
 npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
  @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste eslint-plugin-import-newlines -D
 ```
 
-``` json
+```json
 // .eslintrc.json
 {
-  "extends": "proste/reactTS.js",
+  "extends": "proste/react-ts",
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": ".",
