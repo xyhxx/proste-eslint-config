@@ -12,9 +12,9 @@ module.exports = {
   },
   rules: {
     'react/function-component-definition': [
-      1,
+      2,
       {
-        namedComponents: 'function-declaration',
+        namedComponents: ['function-declaration', 'function-expression'],
         unnamedComponents: 'function-expression',
       },
     ],
