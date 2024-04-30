@@ -70,8 +70,11 @@ module.exports = {
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: [
-          'function',
           'classMethod',
           'classProperty',
           'objectLiteralMethod',
