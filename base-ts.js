@@ -32,7 +32,6 @@ module.exports = {
     '@typescript-eslint/no-loop-func': 2,
     'no-throw-literal': 0,
     '@typescript-eslint/no-throw-literal': 2,
-
     '@typescript-eslint/member-delimiter-style': [
       1,
       {

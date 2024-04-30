@@ -11,6 +11,13 @@ module.exports = {
     },
   },
   rules: {
+    'react/function-component-definition': [
+      1,
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'function-expression',
+      },
+    ],
     'react/boolean-prop-naming': [
       1,
       {
@@ -20,13 +27,6 @@ module.exports = {
       },
     ],
     'react/jsx-handler-names': [1],
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: ['function-declaration', 'function-expression'],
-        unnamedComponents: 'function-expression',
-      },
-    ],
     'react/jsx-one-expression-per-line': [1, {allow: 'single-child'}],
     'react/jsx-curly-brace-presence': 1,
     'react/no-danger': 2,
