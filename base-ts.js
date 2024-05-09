@@ -67,6 +67,7 @@ module.exports = {
       {
         selector: ['variable', 'import'],
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'function',
@@ -103,7 +104,6 @@ module.exports = {
         selector: 'parameter',
         format: ['camelCase'],
         leadingUnderscore: 'allowSingleOrDouble',
-        trailingUnderscore: 'allowSingleOrDouble',
       },
     ],
     '@typescript-eslint/switch-exhaustiveness-check': 2,
