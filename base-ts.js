@@ -135,5 +135,9 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 2, // 不允许ts指定注释
     '@typescript-eslint/await-thenable': 2, // 不允许等待不是未来值的
     '@typescript-eslint/adjacent-overload-signatures': 1, // 将重载函数写在一起
+    '@typescript-eslint/consistent-type-imports': [
+      1,
+      {fixStyle: 'separate-type-imports', prefer: 'type-imports'},
+    ], //规范type引入方式
   },
 };
