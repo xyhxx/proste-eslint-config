@@ -18,5 +18,6 @@ module.exports = {
     'import/no-dynamic-require': 2, // 禁止动态字符串
     'import/no-self-import': 2, // 禁止导入自己
     'import/no-useless-path-segments': 2, // 禁止多余的路径
+    'import/consistent-type-specifier-style': [1, 'prefer-top-level'], // 规范import type的导入格式
   },
 };
