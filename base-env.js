@@ -13,5 +13,5 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 'latest',
   },
-  plugins: ['import'],
+  plugins: ['import-x'],
 };

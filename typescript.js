@@ -6,7 +6,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
+    'plugin:import-x/typescript',
     './base-import.js',
     './base-js.js',
     './base-ts.js',

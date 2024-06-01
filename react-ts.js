@@ -7,7 +7,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
+    'plugin:import-x/typescript',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     './base-js.js',
