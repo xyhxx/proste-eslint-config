@@ -1,19 +1,23 @@
 import type {Linter} from 'eslint';
-import rules from '../rules/react';
+import rules from '@rules/react';
 
 export async function getReactConfig() {
+  // eslint-disable-next-line typescript/ban-ts-comment
   // @ts-expect-error
-  const react = (await import('eslint-plugin-react')).default,
+  const {default: react} = await import('eslint-plugin-react'),
+    // eslint-disable-next-line typescript/ban-ts-comment
     // @ts-expect-error
-    reactHooks = (await import('eslint-plugin-react-hooks')).default,
+    {default: reactHooks} = await import('eslint-plugin-react-hooks'),
+    // eslint-disable-next-line typescript/ban-ts-comment
     // @ts-expect-error
-    reactRefresh = (await import('eslint-plugin-react-refresh')).default,
+    {default: reactRefresh} = await import('eslint-plugin-react-refresh'),
+    // eslint-disable-next-line typescript/ban-ts-comment
     // @ts-expect-error
-    reactCompiler = (await import('eslint-plugin-react-compiler')).default;
+    {default: reactCompiler} = await import('eslint-plugin-react-compiler');
 
   const config: Linter.FlatConfig = {
     name: 'proste_react_config',
-    files: ['**/*.?([cm])?([tj])sx'],
+    files: ['**/*.?([cm])([tj])sx'],
     plugins: {
       react,
       'react-hooks': reactHooks,

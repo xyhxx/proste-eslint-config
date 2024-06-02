@@ -49,7 +49,7 @@ const rules: Linter.RulesRecord = {
   'for-direction': 2, // 强制 “for” 循环中更新子句的计数器朝着正确的方向移动
   'no-unsafe-finally': 2, // finally 中不能出现控制语句
   'no-prototype-builtins': 1,
-  'no-async-promise-executor': 2, // 禁止使用异步函数作为 Promise executor
+  'no-async-promise-executor': 2, // 禁止使用异步函数作为 Promise ex·ecutor
   'no-compare-neg-zero': 2, // 禁止与-0比较
   'no-multi-assign': 2, // 禁止连续赋值
   'no-empty-function': 2, // 禁止空函数

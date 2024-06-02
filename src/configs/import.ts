@@ -1,8 +1,8 @@
 import type {Linter} from 'eslint';
-// eslint-disable-next-line ts/ban-ts-comment
+// eslint-disable-next-line typescript/ban-ts-comment
 // @ts-expect-error
 import importPlugin from 'eslint-plugin-import';
-import importRules from '../rules/import';
+import importRules from '@rules/import';
 
 export function getImportConfig() {
   const config: Linter.FlatConfig = {

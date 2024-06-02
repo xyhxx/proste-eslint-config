@@ -1,11 +1,11 @@
 import type {Linter} from 'eslint';
 
 const rules: Linter.RulesRecord = {
-  // 'no-redeclare': 0,
+  'no-redeclare': 0,
   '@typescript-eslint/no-redeclare': 2,
-  // 'no-use-before-define': 0,
+  'no-use-before-define': 0,
   '@typescript-eslint/no-use-before-define': 2,
-  // 'no-unused-vars': 0,
+  'no-unused-vars': 0,
   '@typescript-eslint/no-unused-vars': [
     1,
     {
@@ -13,25 +13,25 @@ const rules: Linter.RulesRecord = {
       argsIgnorePattern: '^_',
     },
   ],
-  // 'no-shadow': 0,
+  'no-shadow': 0,
   '@typescript-eslint/no-shadow': 0,
-  // 'no-implied-eval': 0,
+  'no-implied-eval': 0,
   '@typescript-eslint/no-implied-eval': 2, // 禁止eval
-  // 'no-empty-function': 0,
+  'no-empty-function': 0,
   '@typescript-eslint/no-empty-function': 2, // 禁止空函数
-  // 'no-useless-constructor': 0,
+  'no-useless-constructor': 0,
   '@typescript-eslint/no-useless-constructor': 2,
-  // 'no-array-constructor': 0,
+  'no-array-constructor': 0,
   '@typescript-eslint/no-array-constructor': 2,
-  // 'require-await': 0,
+  'require-await': 0,
   '@typescript-eslint/require-await': 2,
-  // 'no-dupe-class-members': 0,
+  'no-dupe-class-members': 0,
   '@typescript-eslint/no-dupe-class-members': 2,
-  // 'no-invalid-this': 0,
+  'no-invalid-this': 0,
   '@typescript-eslint/no-invalid-this': 2,
-  // 'no-loop-func': 0,
+  'no-loop-func': 0,
   '@typescript-eslint/no-loop-func': 2,
-  // 'no-throw-literal': 0,
+  'no-throw-literal': 0,
   '@typescript-eslint/no-throw-literal': 2,
   '@typescript-eslint/member-delimiter-style': [
     1,
