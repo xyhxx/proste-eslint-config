@@ -6,6 +6,8 @@ import {getImportConfig} from '@configs/import';
 import {getReactConfig} from '@configs/react';
 import {getPrettierConfig} from '@configs/prettier';
 import {getUnicornConfig} from '@configs/unicorn';
+import {getVitestConfig} from '@configs/vitest';
+import {getJsxA11yConfig} from '@configs/jsxA11y';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
@@ -13,20 +15,31 @@ export type EslintConfigOptions = {
   ts?: boolean;
   prettier?: boolean;
   unicorn?: boolean;
+  vitestGlobals?: boolean;
+  jsxA11y?: boolean;
   ignores?: Linter.FlatConfig['ignores'];
 };
 
-export default async function eslintConfig({
-  tsProjectPath,
-  ignores,
-  react: enableReact = false,
-  ts: enableTypescript = false,
-  prettier: enablePrettier = false,
-  unicorn: enableUnicorn = true,
-}: EslintConfigOptions) {
-  const composer = new FlatConfigComposer();
+type MaybePromise<T> = T | Promise<T>;
 
-  composer.append([
+export default async function eslintConfig(
+  options?: EslintConfigOptions,
+  configs: MaybePromise<
+    Linter.FlatConfig | FlatConfigComposer<any, any>
+  >[] = [],
+) {
+  const {
+    tsProjectPath,
+    ignores,
+    react: enableReact = false,
+    ts: enableTypescript = false,
+    prettier: enablePrettier = false,
+    unicorn: enableUnicorn = true,
+    vitestGlobals = true,
+    jsxA11y: enableJsxA11y = false,
+  } = options ?? {};
+
+  const configList: MaybePromise<Linter.FlatConfig>[] = [
     {
       ignores: ignores ?? [
         '**/node_modules',
@@ -38,14 +51,19 @@ export default async function eslintConfig({
         '**/LICENSE',
       ],
     },
-  ]);
+    base,
+    enableUnicorn ? getUnicornConfig() : null,
+    enableTypescript ? getTypescriptConfig(tsProjectPath) : null,
+    getImportConfig(),
+    enableReact ? getReactConfig() : null,
+    enablePrettier && getPrettierConfig(),
+    vitestGlobals ? getVitestConfig() : null,
+    enableJsxA11y ? getJsxA11yConfig() : null,
+  ].filter(Boolean);
 
-  enableUnicorn && composer.append(getUnicornConfig());
-  composer.append(base);
-  enableTypescript && composer.append(getTypescriptConfig(tsProjectPath));
-  composer.append(getImportConfig());
-  enableReact && composer.append(getReactConfig());
-  enablePrettier && composer.append(getPrettierConfig());
+  const composer = new FlatConfigComposer();
+
+  composer.append(...configList, ...(configs as any[]));
 
   return composer;
 }

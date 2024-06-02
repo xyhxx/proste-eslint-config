@@ -2,16 +2,16 @@ import type {Linter} from 'eslint';
 import rules from '@rules/react';
 
 export async function getReactConfig() {
-  // eslint-disable-next-line typescript/ban-ts-comment
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   const {default: react} = await import('eslint-plugin-react'),
-    // eslint-disable-next-line typescript/ban-ts-comment
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     {default: reactHooks} = await import('eslint-plugin-react-hooks'),
-    // eslint-disable-next-line typescript/ban-ts-comment
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     {default: reactRefresh} = await import('eslint-plugin-react-refresh'),
-    // eslint-disable-next-line typescript/ban-ts-comment
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     {default: reactCompiler} = await import('eslint-plugin-react-compiler');
 

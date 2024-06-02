@@ -7,7 +7,7 @@ const configs: Linter.FlatConfig = {
   name: 'proste_basic_config',
   languageOptions: {
     globals: {
-      // eslint-disable-next-line typescript/naming-convention
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       NodeJS: 'readonly',
       ...globals.browser,
       ...globals.commonjs,

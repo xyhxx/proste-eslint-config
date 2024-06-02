@@ -44,6 +44,8 @@ export default defineConfig({
         'eslint-plugin-react-compiler',
         'eslint-plugin-react',
         'eslint-config-prettier',
+        'eslint-plugin-vitest',
+        'eslint-plugin-jsx-a11y',
       ],
       output: {
         preserveModulesRoot: './src',

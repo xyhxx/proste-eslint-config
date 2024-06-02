@@ -1,4 +1,3 @@
-import {rulesRename} from '@utils/rename';
 import type {Linter} from 'eslint';
 
 export async function getPrettierConfig() {
@@ -6,7 +5,7 @@ export async function getPrettierConfig() {
 
   const config: Linter.FlatConfig = {
     name: 'proste_prettier_config',
-    rules: rulesRename(prettier.rules),
+    rules: prettier.rules,
   };
 
   return config;

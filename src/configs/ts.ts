@@ -1,7 +1,6 @@
 import type {Linter} from 'eslint';
 import process from 'node:process';
 import tsRules from '@rules/ts';
-import {rulesRename} from '@utils/rename';
 
 export async function getTypescriptConfig(
   tsconfigPath?: string,
@@ -25,14 +24,12 @@ export async function getTypescriptConfig(
       },
     },
     plugins: {
-      typescript: tsPlugin as any,
+      '@typescript-eslint': tsPlugin as any,
     },
     rules: {
-      ...rulesRename(
-        tsPlugin.configs['eslint-recommended'].overrides![0].rules!,
-      ),
-      ...rulesRename(tsPlugin.configs.recommended.rules!),
-      ...rulesRename(tsRules),
+      ...tsPlugin.configs['eslint-recommended'].overrides![0].rules,
+      ...tsPlugin.configs.recommended.rules!,
+      ...tsRules,
     },
   };
 }
