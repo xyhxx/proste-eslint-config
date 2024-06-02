@@ -52,18 +52,19 @@ export default async function eslintConfig(
       ],
     },
     base,
-    enableUnicorn ? getUnicornConfig() : null,
-    enableTypescript ? getTypescriptConfig(tsProjectPath) : null,
+    enableUnicorn && getUnicornConfig(),
+    enableTypescript && getTypescriptConfig(tsProjectPath),
     getImportConfig(),
-    enableReact ? getReactConfig() : null,
-    enablePrettier && getPrettierConfig(),
-    vitestGlobals ? getVitestConfig() : null,
-    enableJsxA11y ? getJsxA11yConfig() : null,
+    enableReact && getReactConfig(),
+    vitestGlobals && getVitestConfig(),
+    enableJsxA11y && getJsxA11yConfig(),
   ].filter(Boolean);
 
   const composer = new FlatConfigComposer();
 
   composer.append(...configList, ...(configs as any[]));
+
+  enablePrettier && composer.append(getPrettierConfig());
 
   return composer;
 }
