@@ -10,6 +10,7 @@ import {getVitestConfig} from '@configs/vitest';
 import {getJsxA11yConfig} from '@configs/jsxA11y';
 import {getRegexp} from '@configs/regexp';
 import {getVueConfig} from '@configs/vue';
+import {isPackageExists} from 'local-pkg';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
@@ -45,14 +46,14 @@ export default async function eslintConfig(
   const {
     tsProjectPath,
     ignores = BASE_IGNORES,
-    react: enableReact = false,
-    ts: enableTypescript = false,
-    prettier: enablePrettier = false,
+    react: enableReact = isPackageExists('react'),
+    ts: enableTypescript = isPackageExists('typescript'),
+    prettier: enablePrettier = isPackageExists('prettier'),
     unicorn: enableUnicorn = true,
     vitestGlobals = true,
     jsxA11y: enableJsxA11y = false,
     regexp: enableRegexp = true,
-    vue: enableVue = false,
+    vue: enableVue = isPackageExists('vue'),
   } = options ?? {};
 
   const vueOptions =

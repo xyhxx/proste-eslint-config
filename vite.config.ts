@@ -49,6 +49,7 @@ export default defineConfig({
         'eslint-plugin-regexp',
         'vue-eslint-parser',
         'eslint-plugin-vue',
+        'local-pkg',
       ],
       output: {
         preserveModulesRoot: './src',
