@@ -8,17 +8,29 @@ import {getPrettierConfig} from '@configs/prettier';
 import {getUnicornConfig} from '@configs/unicorn';
 import {getVitestConfig} from '@configs/vitest';
 import {getJsxA11yConfig} from '@configs/jsxA11y';
+import {getRegexp} from '@configs/regexp';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
+  ignores?: Linter.FlatConfig['ignores'];
   react?: boolean;
   ts?: boolean;
   prettier?: boolean;
   unicorn?: boolean;
   vitestGlobals?: boolean;
   jsxA11y?: boolean;
-  ignores?: Linter.FlatConfig['ignores'];
+  regexp?: boolean;
 };
+
+const BASE_IGNORES = [
+  '**/node_modules',
+  '**/dist',
+  '**/package-lock.json',
+  '**/yarn.lock',
+  '**/pnpm-lock.yaml',
+  '**/CHANGELOG.md',
+  '**/LICENSE',
+];
 
 type MaybePromise<T> = T | Promise<T>;
 
@@ -30,26 +42,19 @@ export default async function eslintConfig(
 ) {
   const {
     tsProjectPath,
-    ignores,
+    ignores = BASE_IGNORES,
     react: enableReact = false,
     ts: enableTypescript = false,
     prettier: enablePrettier = false,
     unicorn: enableUnicorn = true,
     vitestGlobals = true,
     jsxA11y: enableJsxA11y = false,
+    regexp: enableRegexp = true,
   } = options ?? {};
 
   const configList: MaybePromise<Linter.FlatConfig>[] = [
     {
-      ignores: ignores ?? [
-        '**/node_modules',
-        '**/dist',
-        '**/package-lock.json',
-        '**/yarn.lock',
-        '**/pnpm-lock.yaml',
-        '**/CHANGELOG.md',
-        '**/LICENSE',
-      ],
+      ignores,
     },
     base,
     enableUnicorn && getUnicornConfig(),
@@ -58,6 +63,7 @@ export default async function eslintConfig(
     enableReact && getReactConfig(),
     vitestGlobals && getVitestConfig(),
     enableJsxA11y && getJsxA11yConfig(),
+    enableRegexp && getRegexp(),
   ].filter(Boolean);
 
   const composer = new FlatConfigComposer();

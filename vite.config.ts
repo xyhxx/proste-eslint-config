@@ -46,6 +46,7 @@ export default defineConfig({
         'eslint-config-prettier',
         'eslint-plugin-vitest',
         'eslint-plugin-jsx-a11y',
+        'eslint-plugin-regexp',
       ],
       output: {
         preserveModulesRoot: './src',
