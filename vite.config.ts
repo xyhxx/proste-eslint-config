@@ -47,6 +47,8 @@ export default defineConfig({
         'eslint-plugin-vitest',
         'eslint-plugin-jsx-a11y',
         'eslint-plugin-regexp',
+        'vue-eslint-parser',
+        'eslint-plugin-vue',
       ],
       output: {
         preserveModulesRoot: './src',

@@ -9,6 +9,7 @@ import {getUnicornConfig} from '@configs/unicorn';
 import {getVitestConfig} from '@configs/vitest';
 import {getJsxA11yConfig} from '@configs/jsxA11y';
 import {getRegexp} from '@configs/regexp';
+import {getVueConfig} from '@configs/vue';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
@@ -20,6 +21,7 @@ export type EslintConfigOptions = {
   vitestGlobals?: boolean;
   jsxA11y?: boolean;
   regexp?: boolean;
+  vue?: boolean | {version: 2 | 3};
 };
 
 const BASE_IGNORES = [
@@ -50,7 +52,19 @@ export default async function eslintConfig(
     vitestGlobals = true,
     jsxA11y: enableJsxA11y = false,
     regexp: enableRegexp = true,
+    vue: enableVue = false,
   } = options ?? {};
+
+  const vueOptions =
+    typeof enableVue === 'boolean'
+      ? {
+          enable: enableVue,
+          version: 3 as const,
+        }
+      : {
+          enable: true,
+          version: enableVue.version,
+        };
 
   const configList: MaybePromise<Linter.FlatConfig>[] = [
     {
@@ -64,6 +78,12 @@ export default async function eslintConfig(
     vitestGlobals && getVitestConfig(),
     enableJsxA11y && getJsxA11yConfig(),
     enableRegexp && getRegexp(),
+    vueOptions.version &&
+      getVueConfig({
+        enableTs: enableTypescript,
+        version: vueOptions.version,
+        tsProjectPath,
+      }),
   ].filter(Boolean);
 
   const composer = new FlatConfigComposer();
