@@ -17,7 +17,7 @@ export async function getReactConfig() {
 
   const config: Linter.FlatConfig = {
     name: 'proste_react_config',
-    files: ['**/*.?([cm])([tj])sx'],
+    files: ['**/*.?([cm])?([tj])sx'],
     plugins: {
       react,
       'react-hooks': reactHooks,

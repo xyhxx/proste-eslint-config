@@ -8,7 +8,7 @@ export async function getJsxA11yConfig() {
 
   const config: Linter.FlatConfig = {
     name: 'proste_jsx_a11y_config',
-    files: ['**/*.?([cm])([tj])sx'],
+    files: ['**/*.?([cm])?([tj])sx'],
     plugins: {
       'jsx-a11y': jsxA11y,
     },
