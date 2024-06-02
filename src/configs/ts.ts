@@ -11,7 +11,7 @@ export async function getTypescriptConfig(
 
   return {
     name: 'proste_typescript_config',
-    files: ['**/*.?([cm])[t]s?(x)'],
+    files: ['**/*.?([cm])?ts?(x)'],
     languageOptions: {
       parser: tsParse,
       parserOptions: {

@@ -1,24 +1,25 @@
 import {getTypescriptConfig} from './configs/ts';
 import base from './configs/base';
 import {FlatConfigComposer} from 'eslint-flat-config-utils';
-import {isPackageExists} from 'local-pkg';
 import type {Linter} from 'eslint';
 import {getImportConfig} from './configs/import';
+import {getReactConfig} from './configs/react';
+import {getPrettierConfig} from './configs/prettier';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
   react?: boolean;
-  vue?: boolean;
   ts?: boolean;
+  prettier?: boolean;
   ignores?: Linter.FlatConfig['ignores'];
 };
 
 export default async function eslintConfig({
   tsProjectPath,
-  react: enableReact = isPackageExists('react'),
-  vue: enableVue = isPackageExists('vue'),
-  ts: enableTypescript = isPackageExists('typescript'),
   ignores,
+  react: enableReact,
+  ts: enableTypescript,
+  prettier: enablePrettier,
 }: EslintConfigOptions) {
   const composer = new FlatConfigComposer();
 
@@ -37,10 +38,10 @@ export default async function eslintConfig({
   ]);
 
   composer.append(base);
-
-  composer.append(getImportConfig());
-
   enableTypescript && composer.append(getTypescriptConfig(tsProjectPath));
+  composer.append(getImportConfig());
+  enableReact && composer.append(getReactConfig());
+  enablePrettier && composer.append(getPrettierConfig());
 
   return composer;
 }
