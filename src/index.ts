@@ -88,7 +88,6 @@ export default async function eslintConfig(
       getVueConfig({
         enableTs: tsOptions.enable,
         version: vueOptions.version,
-        tsProjectPath,
         overrides: vueOptions.overrides,
       }),
   ].filter(Boolean);

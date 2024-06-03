@@ -4,7 +4,6 @@ import type {BaseConfigOptions} from '@utils/types';
 
 export async function getVueConfig({
   enableTs,
-  tsProjectPath,
   version,
   overrides,
 }: BaseConfigOptions<{
@@ -38,8 +37,6 @@ export async function getVueConfig({
             (await import('@typescript-eslint/parser')).default
           : null,
         sourceType: 'module',
-        project: tsProjectPath,
-        tsconfigRootDir: process.cwd(),
       },
     },
     rules: {

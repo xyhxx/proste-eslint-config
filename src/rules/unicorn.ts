@@ -1,7 +1,6 @@
 import type {Linter} from 'eslint';
 
 const rules: Linter.RulesRecord = {
-  'unicorn/catch-error-name': 1,
   'unicorn/consistent-destructuring': 1,
   'unicorn/consistent-empty-array-spread': 2,
   'unicorn/error-message': 2,

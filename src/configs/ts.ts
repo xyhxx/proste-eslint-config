@@ -12,7 +12,7 @@ export async function getTypescriptConfig({
 
   return {
     name: 'proste_typescript_config',
-    files: ['**/*.?([cm])ts?(x)'],
+    files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
     languageOptions: {
       parser: tsParse,
       parserOptions: {

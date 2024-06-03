@@ -49,7 +49,7 @@ const rules: Linter.RulesRecord = {
   'vue/prefer-define-options': 1,
   'vue/prefer-true-attribute-shorthand': 1,
   'vue/html-quotes': 1,
-  'vue/no-static-inline-styles': [2],
+  'vue/no-static-inline-styles': 2,
 };
 
 export default rules;
