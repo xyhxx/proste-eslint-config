@@ -92,6 +92,30 @@ const rules: Linter.RulesRecord = {
   'react/no-children-prop': 1, // 不允许children作为prop传递
   'react/prop-types': 0, // 是否定义props传递类型
   'react/display-name': 1, // 函数组件是否必须命名
+  'react/forbid-component-props': [
+    2,
+    {
+      forbid: [
+        {
+          propName: 'style',
+          message:
+            'Prohibit using the style attribute instead of tailwindcss. If dynamic styles are needed, this rule can be disabled.',
+        },
+      ],
+    },
+  ],
+  'react/forbid-dom-props': [
+    2,
+    {
+      forbid: [
+        {
+          propName: 'style',
+          message:
+            'Prohibit using the style attribute instead of tailwindcss. If dynamic styles are needed, this rule can be disabled.',
+        },
+      ],
+    },
+  ],
 };
 
 export default rules;
