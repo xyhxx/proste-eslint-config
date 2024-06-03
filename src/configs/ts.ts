@@ -3,16 +3,24 @@ import process from 'node:process';
 import tsRules from '@rules/ts';
 import type {BaseConfigOptions} from '@utils/types';
 
+type Config = {
+  tsconfigPath?: string;
+  files?: string[];
+  exts?: string[];
+};
+
 export async function getTypescriptConfig({
   overrides,
   tsconfigPath,
-}: BaseConfigOptions<{tsconfigPath?: string}>): Promise<Linter.FlatConfig> {
+  files = [],
+  exts = [],
+}: BaseConfigOptions<Config>): Promise<Linter.FlatConfig> {
   const {default: tsPlugin} = await import('@typescript-eslint/eslint-plugin'),
     {default: tsParse} = await import('@typescript-eslint/parser');
 
   return {
     name: 'proste_typescript_config',
-    files: ['**/*.?([cm])ts?(x)', '**/*.vue'],
+    files: ['**/*.?([cm])ts?(x)', ...files],
     languageOptions: {
       parser: tsParse,
       parserOptions: {
@@ -23,7 +31,7 @@ export async function getTypescriptConfig({
               tsconfigRootDir: process.cwd(),
             }
           : {}),
-        extraFileExtensions: ['.vue'],
+        extraFileExtensions: exts,
       },
     },
     plugins: {

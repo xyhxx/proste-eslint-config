@@ -66,6 +66,14 @@ export default async function eslintConfig(
     jsOptions = resolveOptions(enableJs),
     importOptions = resolveOptions(enableImport);
 
+  const tsExts = [],
+    tsFiels = [];
+
+  if (vueOptions.enable) {
+    tsExts.push('.vue');
+    tsFiels.push('**/*.vue');
+  }
+
   const configList: MaybePromise<Linter.FlatConfig>[] = [
     {
       ignores,
@@ -77,6 +85,8 @@ export default async function eslintConfig(
       getTypescriptConfig({
         tsconfigPath: tsProjectPath,
         overrides: tsOptions.overrides,
+        exts: tsExts,
+        files: tsFiels,
       }),
     importOptions.enable &&
       getImportConfig({overrides: importOptions.overrides}),
