@@ -1,5 +1,5 @@
 import {getTypescriptConfig} from '@configs/ts';
-import base from '@configs/base';
+import {getJsConfig} from '@configs/js';
 import {FlatConfigComposer} from 'eslint-flat-config-utils';
 import type {Linter} from 'eslint';
 import {getImportConfig} from '@configs/import';
@@ -8,21 +8,23 @@ import {getPrettierConfig} from '@configs/prettier';
 import {getUnicornConfig} from '@configs/unicorn';
 import {getVitestConfig} from '@configs/vitest';
 import {getJsxA11yConfig} from '@configs/jsxA11y';
-import {getRegexp} from '@configs/regexp';
 import {getVueConfig} from '@configs/vue';
 import {isPackageExists} from 'local-pkg';
+import type {EnableOption} from '@utils/types';
+import {resolveOptions, resolveVueOptions} from '@utils/options';
 
 export type EslintConfigOptions = {
   tsProjectPath?: string;
   ignores?: Linter.FlatConfig['ignores'];
-  react?: boolean;
-  ts?: boolean;
-  prettier?: boolean;
-  unicorn?: boolean;
-  vitestGlobals?: boolean;
-  jsxA11y?: boolean;
-  regexp?: boolean;
-  vue?: boolean | {version: 2 | 3};
+  react?: EnableOption;
+  ts?: EnableOption;
+  prettier?: EnableOption;
+  unicorn?: EnableOption;
+  vitestGlobals?: EnableOption;
+  jsxA11y?: EnableOption;
+  vue?: EnableOption<{version?: 2 | 3}>;
+  js?: EnableOption;
+  import?: EnableOption;
 };
 
 const BASE_IGNORES = [
@@ -39,9 +41,7 @@ type MaybePromise<T> = T | Promise<T>;
 
 export default async function eslintConfig(
   options?: EslintConfigOptions,
-  configs: MaybePromise<
-    Linter.FlatConfig | FlatConfigComposer<any, any>
-  >[] = [],
+  ...configs: MaybePromise<Linter.FlatConfig | FlatConfigComposer<any, any>>[]
 ) {
   const {
     tsProjectPath,
@@ -52,38 +52,44 @@ export default async function eslintConfig(
     unicorn: enableUnicorn = true,
     vitestGlobals = true,
     jsxA11y: enableJsxA11y = false,
-    regexp: enableRegexp = true,
     vue: enableVue = isPackageExists('vue'),
+    js: enableJs = true,
+    import: enableImport = true,
   } = options ?? {};
 
-  const vueOptions =
-    typeof enableVue === 'boolean'
-      ? {
-          enable: enableVue,
-          version: 3 as const,
-        }
-      : {
-          enable: true,
-          version: enableVue.version,
-        };
+  const vueOptions = resolveVueOptions(enableVue),
+    reactOptions = resolveOptions(enableReact),
+    tsOptions = resolveOptions(enableTypescript),
+    prettierOptions = resolveOptions(enablePrettier),
+    unicornOptions = resolveOptions(enableUnicorn),
+    jsxA11yOptions = resolveOptions(enableJsxA11y),
+    jsOptions = resolveOptions(enableJs),
+    importOptions = resolveOptions(enableImport);
 
   const configList: MaybePromise<Linter.FlatConfig>[] = [
     {
       ignores,
     },
-    base,
-    enableUnicorn && getUnicornConfig(),
-    enableTypescript && getTypescriptConfig(tsProjectPath),
-    getImportConfig(),
-    enableReact && getReactConfig(),
+    jsOptions.enable && getJsConfig({overrides: jsOptions.overrides}),
+    unicornOptions.enable &&
+      getUnicornConfig({overrides: unicornOptions.overrides}),
+    tsOptions.enable &&
+      getTypescriptConfig({
+        tsconfigPath: tsProjectPath,
+        overrides: tsOptions.overrides,
+      }),
+    importOptions.enable &&
+      getImportConfig({overrides: importOptions.overrides}),
+    reactOptions.enable && getReactConfig({overrides: reactOptions.overrides}),
     vitestGlobals && getVitestConfig(),
-    enableJsxA11y && getJsxA11yConfig(),
-    enableRegexp && getRegexp(),
-    vueOptions.version &&
+    jsxA11yOptions.enable &&
+      getJsxA11yConfig({overrides: jsxA11yOptions.overrides}),
+    vueOptions.enable &&
       getVueConfig({
-        enableTs: enableTypescript,
+        enableTs: tsOptions.enable,
         version: vueOptions.version,
         tsProjectPath,
+        overrides: vueOptions.overrides,
       }),
   ].filter(Boolean);
 
@@ -91,7 +97,8 @@ export default async function eslintConfig(
 
   composer.append(...configList, ...(configs as any[]));
 
-  enablePrettier && composer.append(getPrettierConfig());
+  prettierOptions.enable &&
+    composer.append(getPrettierConfig({overrides: prettierOptions.overrides}));
 
   return composer;
 }

@@ -1,7 +1,8 @@
 import type {Linter} from 'eslint';
 import rules from '@rules/react';
+import type {BaseConfigOptions} from '@utils/types';
 
-export async function getReactConfig() {
+export async function getReactConfig({overrides}: BaseConfigOptions) {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   const {default: react} = await import('eslint-plugin-react'),
@@ -43,6 +44,7 @@ export async function getReactConfig() {
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       ...rules,
+      ...overrides,
     },
   };
 

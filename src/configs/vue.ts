@@ -1,19 +1,23 @@
 import type {Linter} from 'eslint';
 import rules from '@rules/vue';
+import type {BaseConfigOptions} from '@utils/types';
 
-export async function getVueConfig(options: {
+export async function getVueConfig({
+  enableTs,
+  tsProjectPath,
+  version,
+  overrides,
+}: BaseConfigOptions<{
   enableTs?: boolean;
   tsProjectPath?: string;
   version: 2 | 3;
-}) {
+}>) {
   const [{default: vue}, {default: vueParser}] = await Promise.all([
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     import('eslint-plugin-vue'),
     import('vue-eslint-parser'),
   ]);
-
-  const {enableTs, tsProjectPath, version = 3} = options ?? {};
 
   const config: Linter.FlatConfig = {
     name: 'proste_vue_config',
@@ -52,6 +56,7 @@ export async function getVueConfig(options: {
             ...vue.configs['vue3-recommended'].rules,
           }),
       ...rules,
+      ...overrides,
     },
   };
 

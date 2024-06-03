@@ -1,10 +1,12 @@
 import type {Linter} from 'eslint';
 import process from 'node:process';
 import tsRules from '@rules/ts';
+import type {BaseConfigOptions} from '@utils/types';
 
-export async function getTypescriptConfig(
-  tsconfigPath?: string,
-): Promise<Linter.FlatConfig> {
+export async function getTypescriptConfig({
+  overrides,
+  tsconfigPath,
+}: BaseConfigOptions<{tsconfigPath?: string}>): Promise<Linter.FlatConfig> {
   const {default: tsPlugin} = await import('@typescript-eslint/eslint-plugin'),
     {default: tsParse} = await import('@typescript-eslint/parser');
 
@@ -30,6 +32,7 @@ export async function getTypescriptConfig(
       ...tsPlugin.configs['eslint-recommended'].overrides![0].rules,
       ...tsPlugin.configs.recommended.rules!,
       ...tsRules,
+      ...overrides,
     },
   };
 }
