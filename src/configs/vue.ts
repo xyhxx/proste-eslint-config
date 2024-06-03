@@ -8,7 +8,6 @@ export async function getVueConfig({
   overrides,
 }: BaseConfigOptions<{
   enableTs?: boolean;
-  tsProjectPath?: string;
   version: 2 | 3;
 }>) {
   const [{default: vue}, {default: vueParser}] = await Promise.all([

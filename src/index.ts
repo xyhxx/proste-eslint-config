@@ -11,13 +11,18 @@ import {getJsxA11yConfig} from '@configs/jsxA11y';
 import {getVueConfig} from '@configs/vue';
 import {isPackageExists} from 'local-pkg';
 import type {EnableOption} from '@utils/types';
-import {resolveOptions, resolveVueOptions} from '@utils/options';
+import {
+  resolveOptions,
+  resolveTsOptions,
+  resolveVueOptions,
+} from '@utils/options';
 
 export type EslintConfigOptions = {
-  tsProjectPath?: string;
   ignores?: Linter.FlatConfig['ignores'];
   react?: EnableOption;
-  ts?: EnableOption;
+  ts?: EnableOption<{
+    parseOptions?: Linter.ParserOptions;
+  }>;
   prettier?: EnableOption;
   unicorn?: EnableOption;
   vitestGlobals?: EnableOption;
@@ -44,7 +49,6 @@ export default async function eslintConfig(
   ...configs: MaybePromise<Linter.FlatConfig | FlatConfigComposer<any, any>>[]
 ) {
   const {
-    tsProjectPath,
     ignores = BASE_IGNORES,
     react: enableReact = isPackageExists('react'),
     ts: enableTypescript = isPackageExists('typescript'),
@@ -59,7 +63,7 @@ export default async function eslintConfig(
 
   const vueOptions = resolveVueOptions(enableVue),
     reactOptions = resolveOptions(enableReact),
-    tsOptions = resolveOptions(enableTypescript),
+    tsOptions = resolveTsOptions(enableTypescript),
     prettierOptions = resolveOptions(enablePrettier),
     unicornOptions = resolveOptions(enableUnicorn),
     jsxA11yOptions = resolveOptions(enableJsxA11y),
@@ -83,10 +87,10 @@ export default async function eslintConfig(
       getUnicornConfig({overrides: unicornOptions.overrides}),
     tsOptions.enable &&
       getTypescriptConfig({
-        tsconfigPath: tsProjectPath,
         overrides: tsOptions.overrides,
         exts: tsExts,
         files: tsFiels,
+        parseOptions: tsOptions.parseOptions,
       }),
     importOptions.enable &&
       getImportConfig({overrides: importOptions.overrides}),

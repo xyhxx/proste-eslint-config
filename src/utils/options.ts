@@ -1,3 +1,4 @@
+import type {Linter} from 'eslint';
 import type {BaseEnableOption, EnableOption} from './types';
 
 type ResolveOptions<T extends Record<string, any>> = BaseEnableOption<T> & {
@@ -23,4 +24,23 @@ export function resolveVueOptions(
         overrides: {},
       }
     : {version: 3, ...options, enable: true};
+}
+
+export function resolveTsOptions(
+  options: EnableOption<{parseOptions?: Linter.ParserOptions}>,
+): ResolveOptions<{parseOptions: Linter.ParserOptions}> {
+  return typeof options === 'boolean'
+    ? {
+        enable: options,
+        parseOptions: {
+          tsconfigRootDir: process.cwd(),
+        },
+      }
+    : {
+        parseOptions: {
+          tsconfigRootDir: process.cwd(),
+        },
+        ...options,
+        enable: true,
+      };
 }

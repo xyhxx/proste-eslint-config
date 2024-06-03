@@ -1,64 +1,65 @@
 <img src="https://raw.githubusercontent.com/xyhxx/program_preview/master/logo/eslint-config.png" />
 
-## javascript
+support flat config
 
-```
-npm install eslint eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
-```
+# Usage
 
-```json
-// .eslintrc.json
+```js
+// eslint.config.js
 
-{
-  "extends": "proste/javascript"
-}
-```
+import eslintConfig from 'eslint-config-proste';
+import process from 'node:process';
 
-## typescript
-
-```
-npm install eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-proste eslint-plugin-import eslint-plugin-import-newlines -D
-```
-
-```json
-// .eslintrc.json
-{
-  "extends": "proste/typescript",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "."
-  }
-}
+export default eslintConfig({
+  ts: {
+    parseOptions: {
+      project: 'tsconfig.json',
+      tsconfigRootDir: process.cwd(),
+    },
+  },
+});
 ```
 
-## reactJS
+# Support
 
-```
-npm install eslint eslint-plugin-react eslint-config-proste eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-import-newlines -D
-```
+- Typescript
+- React
+- Import
+- Prttier
+- Vue
+- Unicorn
+- JSX-A11y
 
-```json
-// .eslintrc.json
-{
-  "extends": "proste/react-js"
-}
-```
+In most cases, the configuration will automatically start.
+use[local-pkg](https://www.npmjs.com/package/local-pkg).
 
-## reactTS
+You can also turn on or off and rewrite the rules yourself.
 
-```
-npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import
- @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-proste eslint-plugin-import-newlines -D
-```
+```ts
+export type BaseEnableOption<T extends Record<string, any>> = {
+  overrides?: Linter.RulesRecord;
+} & T;
 
-```json
-// .eslintrc.json
-{
-  "extends": "proste/react-ts",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": ".",
-    "warnOnUnsupportedTypeScriptVersion": true
-  }
-}
+export type EnableOption<T extends Record<string, any> = object> =
+  | boolean
+  | BaseEnableOption<T>;
+
+export type BaseConfigOptions<T extends Record<string, any> = object> = {
+  overrides?: Linter.RulesRecord;
+} & T;
+
+type EslintConfigOptions = {
+  ignores?: Linter.FlatConfig['ignores'];
+  react?: EnableOption;
+  ts?: EnableOption<{
+    parseOptions?: Linter.ParserOptions;
+  }>;
+  prettier?: EnableOption;
+  unicorn?: EnableOption;
+  vitestGlobals?: EnableOption;
+  jsxA11y?: EnableOption;
+  vue?: EnableOption<{version?: 2 | 3}>;
+  js?: EnableOption;
+  import?: EnableOption;
+};
 ```
