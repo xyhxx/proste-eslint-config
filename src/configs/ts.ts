@@ -23,6 +23,7 @@ export async function getTypescriptConfig({
               tsconfigRootDir: process.cwd(),
             }
           : {}),
+        extraFileExtensions: ['.vue'],
       },
     },
     plugins: {
