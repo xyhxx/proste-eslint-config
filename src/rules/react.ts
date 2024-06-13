@@ -3,8 +3,25 @@ import type {Linter} from 'eslint';
 const rules: Linter.RulesRecord = {
   'react-hooks/rules-of-hooks': 2,
   'react-hooks/exhaustive-deps': 2,
+
   'react-refresh/only-export-components': 1,
+
   'react-compiler/react-compiler': 2,
+
+  'react-eslint/no-array-index-key': 2,
+  'react-eslint/no-children-count': 2,
+  'react-eslint/no-children-for-each': 2,
+  'react-eslint/no-children-map': 2,
+  'react-eslint/no-children-only': 2,
+  'react-eslint/no-children-to-array': 2,
+  'react-eslint/no-class-component': 2,
+  'react-eslint/no-duplicate-key': 2,
+  'react-eslint/no-unstable-default-props': 2,
+  'react-eslint-name/component-name': [2, 'PascalCase'],
+  'react-eslint-hooks/prefer-use-state-lazy-initialization': 1,
+  'react-eslint-dom/no-children-in-void-dom-elements': 2,
+  'react-eslint-dom/no-find-dom-node': 2,
+
   'react/function-component-definition': [
     2,
     {
@@ -54,7 +71,7 @@ const rules: Linter.RulesRecord = {
       beforeClosing: 'never',
     },
   ],
-  'react/jsx-no-useless-fragment': 0,
+  'react/jsx-no-useless-fragment': 1,
   'react/jsx-indent-props': [2, 2],
   'react/jsx-indent': [2, 2],
   'react/jsx-fragments': [1, 'syntax'],

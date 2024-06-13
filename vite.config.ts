@@ -49,6 +49,7 @@ export default defineConfig({
         'vue-eslint-parser',
         'eslint-plugin-vue',
         'local-pkg',
+        '@eslint-react/eslint-plugin',
       ],
       output: {
         preserveModulesRoot: './src',
