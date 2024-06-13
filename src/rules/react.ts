@@ -1,6 +1,8 @@
 import type {Linter} from 'eslint';
 
 const rules: Linter.RulesRecord = {
+  'react-hooks/rules-of-hooks': 2,
+  'react-hooks/exhaustive-deps': 2,
   'react-refresh/only-export-components': 1,
   'react-compiler/react-compiler': 2,
   'react/function-component-definition': [

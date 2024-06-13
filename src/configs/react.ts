@@ -42,7 +42,6 @@ export async function getReactConfig({overrides}: BaseConfigOptions) {
     rules: {
       ...react.configs.recommended.rules,
       ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
       ...rules,
       ...overrides,
     },
