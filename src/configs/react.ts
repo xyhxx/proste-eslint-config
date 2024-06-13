@@ -3,19 +3,27 @@ import rules from '@rules/react';
 import type {BaseConfigOptions} from '@utils/types';
 
 export async function getReactConfig({overrides}: BaseConfigOptions) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const {default: react} = await import('eslint-plugin-react'),
+  const [
+    {default: react},
+    {default: reactHooks},
+    {default: reactRefresh},
+    {default: reactCompiler},
+    {default: reactEslint},
+  ] = await Promise.all([
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    {default: reactHooks} = await import('eslint-plugin-react-hooks'),
+    import('eslint-plugin-react'),
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    {default: reactRefresh} = await import('eslint-plugin-react-refresh'),
+    import('eslint-plugin-react-hooks'),
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
-    {default: reactCompiler} = await import('eslint-plugin-react-compiler'),
-    {default: reactEslint} = await import('@eslint-react/eslint-plugin');
+    import('eslint-plugin-react-refresh'),
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    import('eslint-plugin-react-compiler'),
+    import('@eslint-react/eslint-plugin'),
+  ]);
 
   const config: Linter.FlatConfig = {
     name: 'proste_react_config',

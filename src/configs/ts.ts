@@ -14,8 +14,10 @@ export async function getTypescriptConfig({
   exts = [],
   parseOptions,
 }: BaseConfigOptions<Config>): Promise<Linter.FlatConfig> {
-  const {default: tsPlugin} = await import('@typescript-eslint/eslint-plugin'),
-    {default: tsParse} = await import('@typescript-eslint/parser');
+  const [{default: tsPlugin}, {default: tsParse}] = await Promise.all([
+    import('@typescript-eslint/eslint-plugin'),
+    import('@typescript-eslint/parser'),
+  ]);
 
   return {
     name: 'proste_typescript_config',
