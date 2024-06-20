@@ -23,6 +23,7 @@ const rules: Linter.RulesRecord = {
   'unicorn/prefer-add-event-listener': 1,
   'unicorn/prefer-number-properties': 1,
   'unicorn/throw-new-error': 2,
+  'unicorn/no-negation-in-equality-check': 1,
 };
 
 export default rules;
