@@ -21,7 +21,7 @@ export async function getJsxA11yConfig({overrides}: BaseConfigOptions) {
       },
     },
     rules: {
-      ...jsxA11y.configs.recommended.rules,
+      ...jsxA11y.flatConfigs.recommended.rules,
       ...rules,
       ...overrides,
     },
