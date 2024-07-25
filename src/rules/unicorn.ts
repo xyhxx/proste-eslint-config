@@ -24,6 +24,7 @@ const rules: Linter.RulesRecord = {
   'unicorn/prefer-number-properties': 1,
   'unicorn/throw-new-error': 2,
   'unicorn/no-negation-in-equality-check': 1,
+  'unicorn/no-length-as-slice-end': 2,
 };
 
 export default rules;
