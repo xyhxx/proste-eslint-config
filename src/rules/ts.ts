@@ -140,6 +140,7 @@ const rules: Linter.RulesRecord = {
     1,
     {fixStyle: 'separate-type-imports', prefer: 'type-imports'},
   ], //规范type引入方式
+  '@typescript-eslint/no-unused-expressions': 0,
 };
 
 export default rules;
