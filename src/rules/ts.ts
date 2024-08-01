@@ -31,8 +31,6 @@ const rules: Linter.RulesRecord = {
   '@typescript-eslint/no-invalid-this': 2,
   'no-loop-func': 0,
   '@typescript-eslint/no-loop-func': 2,
-  'no-throw-literal': 0,
-  '@typescript-eslint/no-throw-literal': 2,
   '@typescript-eslint/member-delimiter-style': [
     1,
     {
