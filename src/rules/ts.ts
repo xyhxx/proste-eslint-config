@@ -31,6 +31,9 @@ const rules: Linter.RulesRecord = {
   '@typescript-eslint/no-invalid-this': 2,
   'no-loop-func': 0,
   '@typescript-eslint/no-loop-func': 2,
+
+  '@typescript-eslint/no-wrapper-object-types': 1,
+  '@typescript-eslint/no-unsafe-function-type': 1,
   '@typescript-eslint/member-delimiter-style': [
     1,
     {
@@ -130,7 +133,6 @@ const rules: Linter.RulesRecord = {
   '@typescript-eslint/no-extra-non-null-assertion': 2, // 禁止额外的非空断言
   '@typescript-eslint/no-empty-interface': 2, // 禁止定义空的接口
   '@typescript-eslint/explicit-module-boundary-types': 0, // 导出的函数必须显性定义返回类型
-  '@typescript-eslint/ban-types': 1, // 禁止使用部分类型
   '@typescript-eslint/ban-ts-comment': 2, // 不允许ts指定注释
   '@typescript-eslint/await-thenable': 2, // 不允许等待不是未来值的
   '@typescript-eslint/adjacent-overload-signatures': 1, // 将重载函数写在一起
