@@ -1,8 +1,12 @@
 import type {ESLint, Linter} from 'eslint';
 import rules from '@rules/react';
 import type {BaseConfigOptions} from '@utils/types';
+import type {ReactVersion} from '@utils/internal';
 
-export async function getReactConfig({overrides}: BaseConfigOptions) {
+export async function getReactConfig({
+  overrides,
+  version,
+}: BaseConfigOptions<{version: ReactVersion}>) {
   const [
     {default: react},
     {default: reactHooks},
@@ -30,7 +34,7 @@ export async function getReactConfig({overrides}: BaseConfigOptions) {
     files: ['**/*.?([cm])?([tj])s?(x)'],
     settings: {
       react: {
-        version: 'detect',
+        version,
       },
     },
     plugins: {

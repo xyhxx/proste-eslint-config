@@ -13,13 +13,17 @@ import {isPackageExists} from 'local-pkg';
 import type {EnableOption} from '@utils/types';
 import {
   resolveOptions,
+  resolveReactOptions,
   resolveTsOptions,
   resolveVueOptions,
 } from '@utils/options';
+import type {ReactVersion, VueVersion} from '@utils/internal';
 
 export type EslintConfigOptions = {
   ignores?: Linter.FlatConfig['ignores'];
-  react?: EnableOption;
+  react?: EnableOption<{
+    version?: ReactVersion;
+  }>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
   }>;
@@ -27,7 +31,7 @@ export type EslintConfigOptions = {
   unicorn?: EnableOption;
   vitestGlobals?: EnableOption;
   jsxA11y?: EnableOption;
-  vue?: EnableOption<{version?: 2 | 3}>;
+  vue?: EnableOption<{version?: VueVersion}>;
   js?: EnableOption;
   import?: EnableOption;
 };
@@ -62,7 +66,7 @@ export default async function eslintConfig(
   } = options ?? {};
 
   const vueOptions = resolveVueOptions(enableVue),
-    reactOptions = resolveOptions(enableReact),
+    reactOptions = resolveReactOptions(enableReact),
     tsOptions = resolveTsOptions(enableTypescript),
     prettierOptions = resolveOptions(enablePrettier),
     unicornOptions = resolveOptions(enableUnicorn),
@@ -94,7 +98,7 @@ export default async function eslintConfig(
       }),
     importOptions.enable &&
       getImportConfig({overrides: importOptions.overrides}),
-    reactOptions.enable && getReactConfig({overrides: reactOptions.overrides}),
+    reactOptions.enable && getReactConfig({...reactOptions}),
     vitestGlobals && getVitestConfig(),
     jsxA11yOptions.enable &&
       getJsxA11yConfig({overrides: jsxA11yOptions.overrides}),
@@ -104,14 +108,12 @@ export default async function eslintConfig(
         version: vueOptions.version,
         overrides: vueOptions.overrides,
       }),
+    prettierOptions.enable &&
+      getPrettierConfig({overrides: prettierOptions.overrides}),
   ].filter(Boolean);
 
   const composer = new FlatConfigComposer();
-
-  composer.append(...configList, ...(configs as any[]));
-
-  prettierOptions.enable &&
-    composer.append(getPrettierConfig({overrides: prettierOptions.overrides}));
+  composer.append([...configList, ...(configs as any[])]);
 
   return composer;
 }

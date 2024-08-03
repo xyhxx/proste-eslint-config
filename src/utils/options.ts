@@ -1,5 +1,6 @@
 import type {Linter} from 'eslint';
 import type {BaseEnableOption, EnableOption} from './types';
+import type {ReactVersion, VueVersion} from './internal';
 
 type ResolveOptions<T extends Record<string, any>> = BaseEnableOption<T> & {
   enable: boolean;
@@ -15,8 +16,8 @@ export function resolveOptions<
 }
 
 export function resolveVueOptions(
-  options: EnableOption<{version?: 2 | 3}>,
-): ResolveOptions<{version: 2 | 3}> {
+  options: EnableOption<{version?: VueVersion}>,
+): ResolveOptions<{version: VueVersion}> {
   return typeof options === 'boolean'
     ? {
         enable: options,
@@ -42,5 +43,20 @@ export function resolveTsOptions(
         },
         ...options,
         enable: true,
+      };
+}
+
+export function resolveReactOptions(
+  options: EnableOption<{version?: ReactVersion}>,
+): ResolveOptions<{version: ReactVersion}> {
+  return typeof options === 'boolean'
+    ? {
+        enable: options,
+        version: 'detect',
+      }
+    : {
+        enable: true,
+        version: options.version ?? 'detect',
+        ...options,
       };
 }
