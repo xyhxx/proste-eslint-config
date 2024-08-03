@@ -17,13 +17,11 @@ import {
   resolveTsOptions,
   resolveVueOptions,
 } from '@utils/options';
-import type {ReactVersion, VueVersion} from '@utils/internal';
+import type {ReactVersion} from '@utils/internal';
 
 export type EslintConfigOptions = {
   ignores?: Linter.FlatConfig['ignores'];
-  react?: EnableOption<{
-    version?: ReactVersion;
-  }>;
+  react?: EnableOption<{version?: ReactVersion}>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
   }>;
@@ -31,7 +29,7 @@ export type EslintConfigOptions = {
   unicorn?: EnableOption;
   vitestGlobals?: EnableOption;
   jsxA11y?: EnableOption;
-  vue?: EnableOption<{version?: VueVersion}>;
+  vue?: EnableOption<{version?: 2 | 3}>;
   js?: EnableOption;
   import?: EnableOption;
 };
@@ -108,12 +106,14 @@ export default async function eslintConfig(
         version: vueOptions.version,
         overrides: vueOptions.overrides,
       }),
-    prettierOptions.enable &&
-      getPrettierConfig({overrides: prettierOptions.overrides}),
   ].filter(Boolean);
 
   const composer = new FlatConfigComposer();
-  composer.append([...configList, ...(configs as any[])]);
+
+  composer.append(...configList, ...(configs as any[]));
+
+  prettierOptions.enable &&
+    composer.append(getPrettierConfig({overrides: prettierOptions.overrides}));
 
   return composer;
 }
