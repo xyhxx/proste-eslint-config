@@ -46,11 +46,6 @@ export async function getReactConfig({overrides}: BaseConfigOptions) {
         '@eslint-react/dom'
       ] as unknown as ESLint.Plugin,
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
     languageOptions: {
       parserOptions: {
         ecmaVersion: 'latest',
