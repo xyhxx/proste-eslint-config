@@ -28,6 +28,11 @@ export async function getReactConfig({overrides}: BaseConfigOptions) {
   const config: Linter.FlatConfig = {
     name: 'proste_react_config',
     files: ['**/*.?([cm])?([tj])s?(x)'],
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
