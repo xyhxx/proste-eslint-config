@@ -8,4 +8,5 @@ export default eslintConfig({
       tsconfigRootDir: process.cwd(),
     },
   },
+  prettier: false,
 });

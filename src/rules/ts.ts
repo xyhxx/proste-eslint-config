@@ -34,19 +34,6 @@ const rules: Linter.RulesRecord = {
 
   '@typescript-eslint/no-wrapper-object-types': 1,
   '@typescript-eslint/no-unsafe-function-type': 1,
-  '@typescript-eslint/member-delimiter-style': [
-    1,
-    {
-      multiline: {
-        delimiter: 'comma',
-        requireLast: true,
-      },
-      singleline: {
-        delimiter: 'comma',
-        requireLast: false,
-      },
-    },
-  ], // 类型属性后加,
   '@typescript-eslint/naming-convention': [
     2,
     {
@@ -111,7 +98,6 @@ const rules: Linter.RulesRecord = {
   '@typescript-eslint/switch-exhaustiveness-check': 2,
   '@typescript-eslint/dot-notation': 0,
   '@typescript-eslint/consistent-type-definitions': [1, 'type'],
-  '@typescript-eslint/type-annotation-spacing': 2,
   '@typescript-eslint/no-unsafe-return': 0, // 不允许返回any类型
   '@typescript-eslint/no-explicit-any': 0, // 是否允许使用any类型
   '@typescript-eslint/no-unnecessary-type-assertion': 1, // 类型断言没有改变类型时警告
