@@ -25,7 +25,7 @@ export default eslintConfig({
 - Typescript
 - React
 - Import
-- Prttier
+- Prettier
 - Vue
 - Unicorn
 - JSX-A11y
@@ -36,21 +36,24 @@ use[local-pkg](https://www.npmjs.com/package/local-pkg).
 You can also turn on or off and rewrite the rules yourself.
 
 ```ts
+export type VueVersion = 2 | 3;
+export type ReactVersion = 'detect' | Omit<string, 'detect'>;
+
 export type BaseEnableOption<T extends Record<string, any>> = {
   overrides?: Linter.RulesRecord;
 } & T;
-
 export type EnableOption<T extends Record<string, any> = object> =
   | boolean
   | BaseEnableOption<T>;
-
 export type BaseConfigOptions<T extends Record<string, any> = object> = {
   overrides?: Linter.RulesRecord;
 } & T;
 
-type EslintConfigOptions = {
+export type EslintConfigOptions = {
   ignores?: Linter.FlatConfig['ignores'];
-  react?: EnableOption;
+  react?: EnableOption<{
+    version?: ReactVersion;
+  }>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
   }>;
@@ -58,8 +61,11 @@ type EslintConfigOptions = {
   unicorn?: EnableOption;
   vitestGlobals?: EnableOption;
   jsxA11y?: EnableOption;
-  vue?: EnableOption<{version?: 2 | 3}>;
+  vue?: EnableOption<{
+    version?: 2 | 3;
+  }>;
   js?: EnableOption;
   import?: EnableOption;
 };
+type MaybePromise<T> = T | Promise<T>;
 ```
