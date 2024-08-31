@@ -47,16 +47,18 @@ export function resolveTsOptions(
 }
 
 export function resolveReactOptions(
-  options: EnableOption<{version?: ReactVersion}>,
-): ResolveOptions<{version: ReactVersion}> {
+  options: EnableOption<{version?: ReactVersion; compiler?: boolean}>,
+): ResolveOptions<{version: ReactVersion; compiler: boolean}> {
   return typeof options === 'boolean'
     ? {
         enable: options,
         version: 'detect',
+        compiler: true,
       }
     : {
         enable: true,
         version: options.version ?? 'detect',
+        compiler: options.compiler ?? true,
         ...options,
       };
 }

@@ -6,8 +6,6 @@ const rules: Linter.RulesRecord = {
 
   'react-refresh/only-export-components': 1,
 
-  'react-compiler/react-compiler': 2,
-
   'react-eslint/no-array-index-key': 2,
   'react-eslint/no-children-count': 2,
   'react-eslint/no-children-for-each': 2,

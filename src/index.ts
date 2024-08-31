@@ -21,7 +21,7 @@ import type {ReactVersion} from '@utils/internal';
 
 export type EslintConfigOptions = {
   ignores?: Linter.FlatConfig['ignores'];
-  react?: EnableOption<{version?: ReactVersion}>;
+  react?: EnableOption<{version?: ReactVersion; compiler?: boolean}>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
   }>;

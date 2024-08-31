@@ -6,7 +6,8 @@ import type {ReactVersion} from '@utils/internal';
 export async function getReactConfig({
   overrides,
   version,
-}: BaseConfigOptions<{version: ReactVersion}>) {
+  compiler,
+}: BaseConfigOptions<{version: ReactVersion; compiler: boolean}>) {
   const [
     {default: react},
     {default: reactHooks},
@@ -69,6 +70,7 @@ export async function getReactConfig({
       ...react.configs['jsx-runtime'].rules,
       ...rules,
       ...overrides,
+      'react-compiler/react-compiler': compiler ? 2 : 0,
     },
   };
 
