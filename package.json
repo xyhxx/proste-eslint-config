@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-proste",
   "description": "preset eslint config",
-  "version": "15.3.0",
+  "version": "15.4.0",
   "repository": "https://github.com/xyhxx/proste-eslint-config.git",
   "author": "xyh <603331487@qq.com>",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-compiler": "0.0.0-experimental-f8a5409-20240829",
+    "eslint-plugin-react-compiler": "0.0.0-experimental-b8a7b48-20240830",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.11",
     "eslint-plugin-unicorn": "^55.0.0",
