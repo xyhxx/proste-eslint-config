@@ -53,6 +53,7 @@ export type EslintConfigOptions = {
   ignores?: Linter.FlatConfig['ignores'];
   react?: EnableOption<{
     version?: ReactVersion;
+    compiler?: boolean;
   }>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
