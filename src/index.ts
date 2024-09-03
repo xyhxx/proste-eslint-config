@@ -56,7 +56,7 @@ export default async function eslintConfig(
     ts: enableTypescript = isPackageExists('typescript'),
     prettier: enablePrettier = isPackageExists('prettier'),
     unicorn: enableUnicorn = true,
-    vitestGlobals = true,
+    vitestGlobals = isPackageExists('vitest'),
     jsxA11y: enableJsxA11y = false,
     vue: enableVue = isPackageExists('vue'),
     js: enableJs = true,

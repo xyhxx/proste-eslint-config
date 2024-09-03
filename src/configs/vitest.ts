@@ -1,7 +1,7 @@
 import type {Linter} from 'eslint';
 
 export async function getVitestConfig() {
-  const {default: vitest} = await import('eslint-plugin-vitest');
+  const {default: vitest} = await import('@vitest/eslint-plugin');
 
   const config: Linter.FlatConfig = {
     name: 'proste_vitest_config',
