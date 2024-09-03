@@ -1,15 +1,29 @@
 import type {Linter} from 'eslint';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import-x';
 import rules from '@rules/import';
 import type {BaseConfigOptions} from '@utils/types';
 
-export function getImportConfig({overrides}: BaseConfigOptions) {
+export async function getImportConfig({
+  overrides,
+  enableTs,
+}: BaseConfigOptions & {enableTs: boolean}) {
   const config: Linter.FlatConfig = {
     plugins: {import: importPlugin as any},
-    rules: {...rules, ...overrides},
+    rules: {
+      ...rules,
+      ...overrides,
+    },
   };
+
+  if (enableTs) {
+    const {default: tsParser} = await import('@typescript-eslint/parser');
+
+    config.languageOptions = {
+      parser: tsParser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    };
+  }
 
   return config;
 }

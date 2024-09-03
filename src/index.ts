@@ -95,7 +95,10 @@ export default async function eslintConfig(
         parseOptions: tsOptions.parseOptions,
       }),
     importOptions.enable &&
-      getImportConfig({overrides: importOptions.overrides}),
+      getImportConfig({
+        overrides: importOptions.overrides,
+        enableTs: tsOptions.enable,
+      }),
     reactOptions.enable && getReactConfig({...reactOptions}),
     vitestGlobals && getVitestConfig(),
     jsxA11yOptions.enable &&
