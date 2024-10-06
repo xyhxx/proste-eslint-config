@@ -16,7 +16,6 @@ export async function getReactConfig({
     {default: reactEslint},
   ] = await Promise.all([
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import('eslint-plugin-react'),
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
@@ -39,7 +38,7 @@ export async function getReactConfig({
       },
     },
     plugins: {
-      react,
+      react: react as any,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'react-compiler': reactCompiler,
@@ -66,8 +65,8 @@ export async function getReactConfig({
       },
     },
     rules: {
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
+      ...(react.configs.flat.recommended.rules as any),
+      ...(react.configs.flat['jsx-runtime'].rules as any),
       ...rules,
       ...overrides,
       'react-compiler/react-compiler': compiler ? 2 : 0,
