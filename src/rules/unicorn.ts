@@ -1,6 +1,8 @@
 import type {Linter} from 'eslint';
 
 const rules: Linter.RulesRecord = {
+  'unicorn/consistent-existence-index-check': 1,
+  'unicorn/prefer-math-min-max': 1,
   'unicorn/consistent-destructuring': 1,
   'unicorn/consistent-empty-array-spread': 2,
   'unicorn/error-message': 2,
