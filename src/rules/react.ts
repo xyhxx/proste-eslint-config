@@ -21,7 +21,7 @@ const rules: Linter.RulesRecord = {
   'react-eslint-dom/no-find-dom-node': 2,
 
   'react/no-unescaped-entities': 2,
-  'react/no-unstable-nested-components': 2,
+  'react/no-unstable-nested-components': [2, {allowAsProps: true}],
   'react/function-component-definition': [
     2,
     {
