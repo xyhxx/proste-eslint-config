@@ -7,7 +7,7 @@ export async function getImportConfig({
   overrides,
   enableTs,
 }: BaseConfigOptions & {enableTs: boolean}) {
-  const config: Linter.FlatConfig = {
+  const config: Linter.Config = {
     plugins: {import: importPlugin as any},
     rules: {
       ...rules,

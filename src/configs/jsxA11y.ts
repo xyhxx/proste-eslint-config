@@ -7,7 +7,7 @@ export async function getJsxA11yConfig({overrides}: BaseConfigOptions) {
   // @ts-expect-error
   const {default: jsxA11y} = await import('eslint-plugin-jsx-a11y');
 
-  const config: Linter.FlatConfig = {
+  const config: Linter.Config = {
     name: 'proste_jsx_a11y_config',
     files: ['**/*.?([cm])?([tj])sx'],
     plugins: {

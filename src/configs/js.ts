@@ -5,7 +5,7 @@ import eslintJs from '@eslint/js';
 import type {BaseConfigOptions} from '@utils/types';
 
 export function getJsConfig({overrides}: BaseConfigOptions) {
-  const config: Linter.FlatConfig = {
+  const config: Linter.Config = {
     name: 'proste_basic_config',
     languageOptions: {
       globals: {

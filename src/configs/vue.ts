@@ -11,13 +11,11 @@ export async function getVueConfig({
   version: 2 | 3;
 }>) {
   const [{default: vue}, {default: vueParser}] = await Promise.all([
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import('eslint-plugin-vue'),
     import('vue-eslint-parser'),
   ]);
 
-  const config: Linter.FlatConfig = {
+  const config: Linter.Config = {
     name: 'proste_vue_config',
     files: ['**/*.vue'],
     plugins: {

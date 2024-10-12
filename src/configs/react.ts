@@ -15,7 +15,6 @@ export async function getReactConfig({
     {default: reactCompiler},
     {default: reactEslint},
   ] = await Promise.all([
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     import('eslint-plugin-react'),
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
@@ -29,7 +28,7 @@ export async function getReactConfig({
     import('@eslint-react/eslint-plugin'),
   ]);
 
-  const config: Linter.FlatConfig = {
+  const config: Linter.Config = {
     name: 'proste_react_config',
     files: ['**/*.?([cm])?([tj])s?(x)'],
     settings: {

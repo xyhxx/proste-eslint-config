@@ -20,7 +20,7 @@ import {
 import type {ReactVersion} from '@utils/internal';
 
 export type EslintConfigOptions = {
-  ignores?: Linter.FlatConfig['ignores'];
+  ignores?: Linter.Config['ignores'];
   react?: EnableOption<{version?: ReactVersion; compiler?: boolean}>;
   ts?: EnableOption<{
     parseOptions?: Linter.ParserOptions;
@@ -48,7 +48,7 @@ type MaybePromise<T> = T | Promise<T>;
 
 export default async function eslintConfig(
   options?: EslintConfigOptions,
-  ...configs: MaybePromise<Linter.FlatConfig | FlatConfigComposer<any, any>>[]
+  ...configs: MaybePromise<Linter.Config | FlatConfigComposer<any, any>>[]
 ) {
   const {
     ignores = BASE_IGNORES,
@@ -80,7 +80,7 @@ export default async function eslintConfig(
     tsFiels.push('**/*.vue');
   }
 
-  const configList: MaybePromise<Linter.FlatConfig>[] = [
+  const configList: MaybePromise<Linter.Config>[] = [
     {
       ignores,
     },
