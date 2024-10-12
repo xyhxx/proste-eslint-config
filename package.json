@@ -21,7 +21,7 @@
     "react-lint"
   ],
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.6.1",
