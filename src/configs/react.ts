@@ -64,8 +64,8 @@ export async function getReactConfig({
       },
     },
     rules: {
-      ...(react.configs.flat.recommended.rules as any),
-      ...(react.configs.flat['jsx-runtime'].rules as any),
+      ...react.configs.flat?.recommended.rules,
+      ...react.configs.flat?.['jsx-runtime'].rules,
       ...rules,
       ...overrides,
       'react-compiler/react-compiler': compiler ? 2 : 0,
