@@ -16,14 +16,8 @@ export async function getReactConfig({
     {default: reactEslint},
   ] = await Promise.all([
     import('eslint-plugin-react'),
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import('eslint-plugin-react-hooks'),
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import('eslint-plugin-react-refresh'),
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import('eslint-plugin-react-compiler'),
     import('@eslint-react/eslint-plugin'),
   ]);

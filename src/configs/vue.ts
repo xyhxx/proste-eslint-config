@@ -45,9 +45,9 @@ export async function getVueConfig({
             ...vue.configs.recommended.rules,
           }
         : {
-            ...vue.configs['vue3-essential'].rules,
-            ...vue.configs['vue3-strongly-recommended'].rules,
-            ...vue.configs['vue3-recommended'].rules,
+            ...vue.configs['essential'].rules,
+            ...vue.configs['strongly-recommended'].rules,
+            ...vue.configs['recommended'].rules,
           }),
       ...rules,
       ...overrides,

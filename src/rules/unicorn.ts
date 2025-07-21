@@ -9,7 +9,7 @@ const rules: Linter.RulesRecord = {
   'unicorn/escape-case': 1,
   'unicorn/new-for-builtins': 2,
   'unicorn/no-array-for-each': 2,
-  'unicorn/no-array-push-push': 2,
+  'unicorn/prefer-single-call': 2,
   'unicorn/no-await-expression-member': 2,
   'unicorn/no-array-reduce': 2,
   'unicorn/no-await-in-promise-methods': 2,
@@ -26,7 +26,7 @@ const rules: Linter.RulesRecord = {
   'unicorn/prefer-number-properties': 1,
   'unicorn/throw-new-error': 2,
   'unicorn/no-negation-in-equality-check': 1,
-  'unicorn/no-length-as-slice-end': 2,
+  'unicorn/no-unnecessary-slice-end': 2,
 };
 
 export default rules;
